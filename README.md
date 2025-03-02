@@ -2,6 +2,34 @@
 
 A curated timeline of high-signal events in artificial intelligence and machine learning.
 
+**[📊 View Live Timeline](https://jdehorty.github.io/ai-news-timeline)** - Check out the live deployment on GitHub Pages!
+
+## Quick Start
+
+- 🌐 **Live Demo**: [https://jdehorty.github.io/ai-news-timeline](https://jdehorty.github.io/ai-news-timeline)
+- 🚀 **Run Locally**: `docker-compose up dev` or `npm start`
+- 🔄 **Contribute**: Open an issue to suggest new AI events to add to the timeline
+
+## Table of Contents
+
+- [AI News Timeline](#ai-news-timeline)
+  - [Quick Start](#quick-start)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Live Demo](#live-demo)
+  - [Features](#features)
+  - [Updates](#updates)
+  - [Technology](#technology)
+  - [Docker Setup](#docker-setup)
+    - [Prerequisites](#prerequisites)
+    - [Development Mode](#development-mode)
+    - [Production Mode](#production-mode)
+    - [Building for GitHub Pages](#building-for-github-pages)
+      - [Manual Deployment](#manual-deployment)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+
 ## About
 
 AI News Timeline is an ongoing project that tracks and visualizes significant developments in the AI/ML landscape. Rather than capturing every news item, this timeline focuses on high-impact events that shape the direction of AI research, applications, and policy.
@@ -10,6 +38,16 @@ The timeline is presented as an interactive web application that allows users to
 - Browse events chronologically
 - Filter by month, category, and company
 - Share specific views via URL parameters
+
+## Live Demo
+
+The project is deployed and accessible at: **[https://jdehorty.github.io/ai-news-timeline](https://jdehorty.github.io/ai-news-timeline)**
+
+Key features you can try in the live demo:
+- Navigate through the timeline of AI events
+- Use the filters to focus on specific categories or companies
+- Share your filtered view with others via URL
+- Explore the responsive design on both desktop and mobile devices
 
 ## Features
 
@@ -65,11 +103,26 @@ This will build the optimized production version and serve it on http://localhos
 
 ### Building for GitHub Pages
 
-The project is configured to deploy to GitHub Pages using GitHub Actions. When you push to the main branch, the workflow will automatically:
+The project is automatically deployed to GitHub Pages using GitHub Actions. The live site is available at:
+**[https://jdehorty.github.io/ai-news-timeline](https://jdehorty.github.io/ai-news-timeline)**
 
-1. Build the Docker image
-2. Extract the build artifacts
+When you push to the main branch, the workflow will automatically:
+
+1. Build the project using Node.js
+2. Package the build artifacts
 3. Deploy to GitHub Pages
+
+You can view the deployment workflow in `.github/workflows/deploy.yml`.
+
+#### Manual Deployment
+
+You can also manually deploy to GitHub Pages using:
+
+```bash
+npm run deploy
+```
+
+This will build the project and push it to the `gh-pages` branch, which is configured to serve the GitHub Pages site.
 
 ## Contributing
 
