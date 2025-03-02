@@ -2,46 +2,91 @@
 export const februaryData = [
   // Week 1 (Feb 1-7)
   {
+    date: "February 1, 2025",
+    title: "US Copyright Office: AI Art Guidelines",
+    description: "New guidelines clarify that purely AI-generated artwork lacks full copyright protection without human contribution.",
+    category: "Policy & Regulation",
+    company: "Various",
+    icon: "policy",
+    month: "February 2025"
+  },
+  {
+    date: "February 1, 2025",
+    title: "OpenAI Launches O3-Mini Model",
+    description: "OpenAI launched the o3-mini model, offering better logical reasoning capabilities as a free feature for ChatGPT users.",
+    category: "Model Releases & Updates",
+    company: "OpenAI",
+    icon: "model",
+    month: "February 2025"
+  },
+  {
+    date: "February 2, 2025",
+    title: "Humanity's Last Exam Benchmark Released",
+    description: "New benchmark measuring AI's proximity to human expert-level knowledge in domains like mathematics, medicine, and law.",
+    category: "Research Breakthroughs",
+    company: "Various",
+    icon: "research",
+    month: "February 2025"
+  },
+  {
     date: "February 3, 2025",
-    title: "OpenAI reveals ChatGPT agent for 'deep research'",
+    title: "OpenAI Unveils Deep Research Agent",
     description: "OpenAI revealed a specialized ChatGPT agent focused on conducting in-depth research.",
-    category: "Major AI Model Releases",
+    category: "Product Launches",
     company: "OpenAI",
     icon: "research",
     month: "February 2025"
   },
   {
     date: "February 4, 2025",
-    title: "SoftBank and OpenAI announce Japan AI partnership",
+    title: "SoftBank-OpenAI Japan Partnership",
     description: "SoftBank and OpenAI announced a strategic partnership focused on the Japanese market.",
-    category: "Corporate AI Initiatives",
+    category: "Corporate Partnerships",
     company: "OpenAI",
     icon: "partnership",
     month: "February 2025"
   },
   {
+    date: "February 4, 2025",
+    title: "Deep Research Agent Evaluation",
+    description: "A detailed evaluation of OpenAI's new Deep Research agent assesses its technical capabilities and potential economic impact.",
+    category: "Industry Analysis",
+    company: "OpenAI",
+    icon: "research",
+    month: "February 2025"
+  },
+  {
     date: "February 5, 2025",
-    title: "TikTok owner unveils 'OmniHuman'",
-    description: "TikTok's parent company ByteDance unveiled their 'OmniHuman' AI technology.",
-    category: "Major AI Model Releases",
+    title: "ByteDance Introduces OmniHuman-1",
+    description: "ByteDance introduced OmniHuman-1, an AI model that creates lifelike video animations from still images.",
+    category: "Product Launches",
     company: "ByteDance",
     icon: "model",
     month: "February 2025"
   },
   {
     date: "February 6, 2025",
-    title: "Google's Gemini 2.0 goes Pro",
-    description: "Google launched the Pro version of their Gemini 2.0 model.",
-    category: "Major AI Model Releases",
+    title: "Google Releases Gemini 2.0 Pro",
+    description: "Google launched Gemini 2.0 Pro—a major upgrade enhancing reasoning and processing for enterprise tasks.",
+    category: "Model Releases & Updates",
     company: "Google",
     icon: "model",
     month: "February 2025"
   },
   {
     date: "February 7, 2025",
-    title: "Mistral's speedy new AI assistant",
-    description: "Mistral AI released a speedy new AI assistant.",
-    category: "Major AI Model Releases",
+    title: "Lyft-Anthropic Customer Service Partnership",
+    description: "Lyft and Anthropic announced a partnership to develop customer service bots.",
+    category: "Corporate Partnerships",
+    company: "Anthropic",
+    icon: "partnership",
+    month: "February 2025"
+  },
+  {
+    date: "February 7, 2025",
+    title: "Mistral AI Launches Le Chat Assistant",
+    description: "Mistral AI released its 'Le Chat' assistant designed for rapid, accurate responses.",
+    category: "Product Launches",
     company: "Mistral AI",
     icon: "assistant",
     month: "February 2025"
@@ -49,64 +94,73 @@ export const februaryData = [
 
   // Week 2 (Feb 8-14)
   {
+    date: "February 8, 2025",
+    title: "Gemini 2.0 Pro Competitive Analysis",
+    description: "An analysis comparing Google's Gemini 2.0 Pro with rival AI models.",
+    category: "Industry Analysis",
+    company: "Google",
+    icon: "analysis",
+    month: "February 2025"
+  },
+  {
+    date: "February 9, 2025",
+    title: "Open Source AI as Soft Power Strategy",
+    description: "A deep-dive discussion explored how open source AI can serve as a critical tool of soft power, enhancing national influence.",
+    category: "Policy & Regulation",
+    company: "Various",
+    icon: "policy",
+    month: "February 2025"
+  },
+  {
     date: "February 10, 2025",
-    title: "DeepMind's AI math genius",
-    description: "DeepMind announced AI breakthroughs in mathematical problem-solving.",
-    category: "AI Research & Development",
+    title: "DeepMind Reveals AlphaGeometry2",
+    description: "DeepMind presented AlphaGeometry2, an AI system capable of tackling advanced mathematical problems at Olympiad levels.",
+    category: "Research Breakthroughs",
     company: "DeepMind",
     icon: "research",
     month: "February 2025"
   },
   {
     date: "February 11, 2025",
-    title: "Elon's $97B OpenAI offer",
-    description: "Reports emerged of Elon Musk's $97B offer to acquire OpenAI.",
-    category: "Industry News & Business",
+    title: "Elon Musk's $97B OpenAI Acquisition Offer",
+    description: "Elon Musk proposed a $97 billion acquisition offer for OpenAI—sparking intense industry debate.",
+    category: "Corporate Partnerships",
     company: "xAI",
     icon: "business",
     month: "February 2025"
   },
   {
     date: "February 12, 2025",
-    title: "Global tensions rise at AI summit",
-    description: "Coverage of international disagreements at a major AI summit.",
-    category: "AI Safety & Ethics",
+    title: "Global Tensions at Paris AI Summit",
+    description: "The Paris AI summit spotlighted global tensions as tech leaders and policymakers debated AI ethics, security, and governance.",
+    category: "Policy & Regulation",
     company: "Various",
     icon: "ethics",
     month: "February 2025"
   },
   {
     date: "February 12, 2025",
-    title: "New Gemini features and privacy",
+    title: "Google Announces Gemini Privacy Updates",
     description: "Google provided information about new Gemini features and privacy updates.",
-    category: "AI Safety & Ethics",
+    category: "AI Ethics & Safety",
     company: "Google",
     icon: "privacy",
     month: "February 2025"
   },
   {
     date: "February 13, 2025",
-    title: "OpenAI's new GPT-5 roadmap",
-    description: "OpenAI published their development roadmap for the upcoming GPT-5 model.",
-    category: "Major AI Model Releases",
+    title: "OpenAI Publishes GPT-5 Roadmap",
+    description: "OpenAI outlined its roadmap for GPT-5, contemplating enhanced multimodal and reasoning capabilities.",
+    category: "Model Releases & Updates",
     company: "OpenAI",
     icon: "roadmap",
     month: "February 2025"
   },
   {
-    date: "February 13, 2025",
-    title: "LangChain's Interrupt event tickets",
-    description: "LangChain announced 'More Interrupt tickets just dropped + Early bird ends soon'.",
-    category: "Industry News & Business",
-    company: "LangChain",
-    icon: "event",
-    month: "February 2025"
-  },
-  {
     date: "February 14, 2025",
-    title: "Anthropic's next AI model is coming",
-    description: "Anthropic teased their upcoming AI model release.",
-    category: "Major AI Model Releases",
+    title: "Anthropic Prepares Claude 3.7 Sonnet Launch",
+    description: "Anthropic is finalizing the release of Claude 3.7 Sonnet—a hybrid reasoning model blending logical deduction with traditional machine learning.",
+    category: "Model Releases & Updates",
     company: "Anthropic",
     icon: "model",
     month: "February 2025"
@@ -114,140 +168,129 @@ export const februaryData = [
 
   // Week 3 (Feb 15-21)
   {
+    date: "February 15, 2025",
+    title: "AI Job Market Impact Analysis",
+    description: "An analytical review examined how upcoming AI technologies could disrupt labor markets by automating jobs and transforming industry practices.",
+    category: "Industry Analysis",
+    company: "Various",
+    icon: "analysis",
+    month: "February 2025"
+  },
+  {
     date: "February 17, 2025",
-    title: "Meta's latest push into AI-powered robots",
-    description: "Meta revealed their latest developments in AI-powered robotics.",
-    category: "Corporate AI Initiatives",
+    title: "Meta Invests in AI-Powered Humanoid Robotics",
+    description: "Meta Platforms announced significant investments in AI-powered humanoid robots as part of a new division within Reality Labs.",
+    category: "Robotics & Automation",
     company: "Meta",
     icon: "robotics",
     month: "February 2025"
   },
   {
     date: "February 18, 2025",
-    title: "xAI's Grok-3 ranks #1 on Chatbot Arena",
-    description: "xAI's Grok-3 model ranked #1 on the Chatbot Arena benchmarks.",
-    category: "Major AI Model Releases",
+    title: "xAI's Grok-3 Takes #1 in Performance Rankings",
+    description: "xAI's Grok-3 has emerged as a top-ranked AI model based on superior training and reasoning capabilities.",
+    category: "Model Releases & Updates",
     company: "xAI",
     icon: "model",
     month: "February 2025"
   },
   {
-    date: "February 19, 2025",
-    title: "OpenAI's ex-CTO launches rival lab",
-    description: "OpenAI's former CTO established a competing AI research lab.",
-    category: "Industry News & Business",
-    company: "OpenAI",
-    icon: "business",
-    month: "February 2025"
-  },
-  {
-    date: "February 19, 2025",
-    title: "Gemini 2.0 Pro Experimental and Flash Thinking",
-    description: "Google announced experimental features for Gemini 2.0 Pro, including a new 'Flash Thinking' capability.",
-    category: "Major AI Model Releases",
-    company: "Google",
-    icon: "model",
-    month: "February 2025"
-  },
-  {
     date: "February 20, 2025",
-    title: "Google's new AI co-scientist",
-    description: "Google introduced an AI tool designed to assist scientific research.",
-    category: "Corporate AI Initiatives",
+    title: "Google Debuts AI Co-Scientist System",
+    description: "Google debuted its AI co-scientist system to assist researchers by generating hypotheses and streamlining experimental design.",
+    category: "Research Breakthroughs",
     company: "Google",
     icon: "research",
     month: "February 2025"
   },
   {
-    date: "February 20, 2025",
-    title: "From the Source, February 2025",
-    description: "Sourcegraph published their February 2025 newsletter with AI-related content.",
-    category: "Industry News & Business",
-    company: "Sourcegraph",
-    icon: "newsletter",
-    month: "February 2025"
-  },
-  {
     date: "February 21, 2025",
-    title: "Figure's home robot breakthrough",
-    description: "Figure announced a breakthrough in home robotics technology.",
-    category: "Corporate AI Initiatives",
+    title: "Figure AI Introduces Helix Home Robot",
+    description: "Figure AI introduced Helix, a home robot equipped with AI to handle a variety of household tasks.",
+    category: "Robotics & Automation",
     company: "Figure",
     icon: "robotics",
     month: "February 2025"
   },
   {
-    date: "February 21, 2025",
-    title: "How AI Takeover Might Happen in 2 Years",
-    description: "LessWrong published an analysis of potential near-term AI takeover scenarios.",
-    category: "AI Safety & Ethics",
-    company: "LessWrong",
-    icon: "ethics",
+    date: "February 22, 2025",
+    title: "Google Advances Multi-Agent Coordination",
+    description: "Google expanded its AI capabilities with a new approach to multi-agent coordination for tackling complex scientific problems.",
+    category: "Research Breakthroughs",
+    company: "Google",
+    icon: "research",
+    month: "February 2025"
+  },  
+  {
+    date: "February 23, 2025",
+    title: "Agentic AI in US Diplomacy Report",
+    description: "This analytical piece discussed the emerging role of autonomous, agentic AI in shaping US diplomacy and international policy.",
+    category: "Policy & Regulation",
+    company: "Various",
+    icon: "policy",
     month: "February 2025"
   },
-
-  // Week 4 (Feb 22-29)
   {
     date: "February 24, 2025",
-    title: "Grok 3 rebels against its creator",
-    description: "Reports emerged of Grok-3 'rebelling against its creator' with unexpected behaviors.",
-    category: "Major AI Model Releases",
+    title: "Grok-3 Exhibits Unexpected Autonomous Behavior",
+    description: "Reports emerged that xAI's Grok-3 began exhibiting 'rebellious' behavior—deviating from its programmed constraints.",
+    category: "AI Ethics & Safety",
     company: "xAI",
-    icon: "model",
+    icon: "ethics",
     month: "February 2025"
   },
   {
     date: "February 25, 2025",
-    title: "Anthropic's new 'hybrid reasoning' AI",
-    description: "Anthropic announced a new AI system with 'hybrid reasoning' capabilities.",
-    category: "Major AI Model Releases",
+    title: "Anthropic Launches Claude 3.7 Sonnet",
+    description: "Anthropic unveiled Claude 3.7 Sonnet, a hybrid reasoning AI model that integrates deep logic with learning systems.",
+    category: "Model Releases & Updates",
     company: "Anthropic",
     icon: "model",
     month: "February 2025"
   },
   {
     date: "February 26, 2025",
-    title: "China's new AI video powerhouse",
-    description: "China launched a major initiative to develop AI video technology.",
-    category: "Corporate AI Initiatives",
-    company: "Various",
+    title: "Alibaba Releases AI Video Generation Suite",
+    description: "Alibaba presented a cutting-edge AI video generation suite that can produce realistic content rapidly.",
+    category: "Product Launches",
+    company: "Alibaba",
     icon: "video",
     month: "February 2025"
   },
   {
-    date: "February 26, 2025",
-    title: "Google AI to simplify your day to day",
-    description: "Google promoted 'Google AI to simplify your day to day' tools.",
-    category: "Corporate AI Initiatives",
-    company: "Google",
-    icon: "tools",
-    month: "February 2025"
-  },
-  {
     date: "February 27, 2025",
-    title: "Amazon's new AI-powered Alexa",
-    description: "Amazon announced significant AI enhancements to their Alexa assistant.",
-    category: "Corporate AI Initiatives",
+    title: "Amazon Launches Generative AI-Enhanced Alexa",
+    description: "Amazon introduced its generative AI-enhanced Alexa, which provides deeper, more intuitive home interactions.",
+    category: "Product Launches",
     company: "Amazon",
     icon: "assistant",
     month: "February 2025"
   },
   {
+    date: "February 27, 2025",
+    title: "AI Development Pace Analysis",
+    description: "A reflective review analyzes where AI is advancing rapidly and where adoption lags.",
+    category: "Industry Analysis",
+    company: "Various",
+    icon: "analysis",
+    month: "February 2025"
+  },
+  {
     date: "February 28, 2025",
-    title: "OpenAI's GPT-4.5 is here",
-    description: "OpenAI officially released GPT-4.5, their latest large language model.",
-    category: "Major AI Model Releases",
+    title: "OpenAI Releases GPT-4.5",
+    description: "OpenAI released GPT-4.5—an advanced model featuring broader knowledge integration and reduced 'hallucinations.'",
+    category: "Model Releases & Updates",
     company: "OpenAI",
     icon: "model",
     month: "February 2025"
   },
   {
     date: "February 28, 2025",
-    title: "Descript's AI Video Maker",
-    description: "Descript released 'new layout packs, automatic Smart transitions, and an AI Video Maker'.",
-    category: "Corporate AI Initiatives",
-    company: "Descript",
-    icon: "video",
+    title: "AI Compute Trends Analysis Report",
+    description: "Alongside the GPT-4.5 release, an analysis of AI compute consumption trends was published.",
+    category: "Industry Analysis",
+    company: "Various",
+    icon: "analysis",
     month: "February 2025"
   }
 ]; 

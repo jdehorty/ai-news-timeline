@@ -6,12 +6,14 @@ import { marchData } from './march2025Data';
 // Categories for filtering
 export const categories = [
   "All",
-  "Major AI Model Releases",
-  "Corporate AI Initiatives",
-  "AI Research & Development",
-  "AI Safety & Ethics",
-  "AI Tools & Applications",
-  "Industry News & Business"
+  "Model Releases & Updates",
+  "Product Launches",
+  "Research Breakthroughs",
+  "Corporate Partnerships",
+  "Policy & Regulation",
+  "AI Ethics & Safety",
+  "Industry Analysis",
+  "Robotics & Automation"
 ];
 
 // Companies for filtering
