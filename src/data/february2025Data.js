@@ -1,6 +1,6 @@
-// Timeline data extracted from AI newsletters
-export const timelineData = [
-  // February 2025
+// February 2025 timeline data
+export const februaryData = [
+  // Week 1 (Feb 1-7)
   {
     date: "February 3, 2025",
     title: "OpenAI reveals ChatGPT agent for 'deep research'",
@@ -249,63 +249,5 @@ export const timelineData = [
     company: "Descript",
     icon: "video",
     month: "February 2025"
-  },
-
-  // March 2025 (example data)
-  {
-    date: "March 1, 2025",
-    title: "Anthropic releases Claude 4",
-    description: "Anthropic unveiled Claude 4, their most advanced AI assistant to date.",
-    category: "Major AI Model Releases",
-    company: "Anthropic",
-    icon: "model",
-    month: "March 2025"
-  },
-  {
-    date: "March 3, 2025",
-    title: "DeepMind's AlphaCode 2 solves competitive programming challenges",
-    description: "DeepMind announced that AlphaCode 2 can solve competitive programming challenges at an expert level.",
-    category: "AI Research & Development",
-    company: "DeepMind",
-    icon: "research",
-    month: "March 2025"
   }
-];
-
-// Categories for filtering
-export const categories = [
-  "All",
-  "Major AI Model Releases",
-  "Corporate AI Initiatives",
-  "AI Research & Development",
-  "AI Safety & Ethics",
-  "AI Tools & Applications",
-  "Industry News & Business"
-];
-
-// Companies for filtering
-export const companies = [
-  "All",
-  "OpenAI",
-  "Google",
-  "Anthropic",
-  "xAI",
-  "Mistral AI",
-  "ByteDance",
-  "Meta",
-  "Amazon",
-  "DeepMind",
-  "Figure",
-  "LangChain",
-  "LessWrong",
-  "Sourcegraph",
-  "Descript",
-  "Various"
-];
-
-// Available months for selection
-export const availableMonths = [
-  "February 2025",
-  "March 2025",
-  // Add more months as you create data for them
 ]; 
