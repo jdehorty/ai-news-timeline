@@ -33,14 +33,14 @@ const Header = () => {
           <Button 
             color="inherit" 
             startIcon={<InfoIcon />}
-            onClick={() => window.open('https://github.com/yourusername/ai-news-timeline', '_blank')}
+            onClick={() => window.open('https://github.com/jdehorty/ai-news-timeline', '_blank')}
           >
             About
           </Button>
           <Button 
             color="inherit" 
             startIcon={<GitHubIcon />}
-            onClick={() => window.open('https://github.com/yourusername/ai-news-timeline', '_blank')}
+            onClick={() => window.open('https://github.com/jdehorty/ai-news-timeline', '_blank')}
           >
             GitHub
           </Button>
