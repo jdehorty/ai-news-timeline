@@ -25,7 +25,15 @@ A curated timeline of high-signal events in artificial intelligence and machine 
       <strong>💻 Run Locally</strong>
     </td>
     <td>
-      <code>docker-compose up dev</code> or <code>npm start</code>
+      <code>npm install</code> then <code>npm start</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>🐳 Run with Docker</strong>
+    </td>
+    <td>
+      <code>docker-compose up dev</code> or <code>npm run docker:dev</code>
     </td>
   </tr>
   <tr>
@@ -38,6 +46,46 @@ A curated timeline of high-signal events in artificial intelligence and machine 
   </tr>
 </table>
 
+### Running the Application
+
+You have two options to run this application:
+
+#### Option 1: Run Locally (without Docker)
+
+1. Make sure you have Node.js installed (v16 or later recommended)
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/jdehorty/ai-news-timeline.git
+   cd ai-news-timeline
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open your browser and navigate to http://localhost:3000
+
+#### Option 2: Run with Docker
+
+1. Make sure you have Docker and Docker Compose installed
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/jdehorty/ai-news-timeline.git
+   cd ai-news-timeline
+   ```
+3. Start the development container:
+   ```bash
+   docker-compose up dev
+   ```
+   Or use the npm script:
+   ```bash
+   npm run docker:dev
+   ```
+4. Open your browser and navigate to http://localhost:3000
+
 ## 📸 Timeline Preview
 
 <div align="center">
@@ -49,6 +97,9 @@ A curated timeline of high-signal events in artificial intelligence and machine 
 
 - [AI News Timeline](#ai-news-timeline)
   - [🚀 Quick Start](#-quick-start)
+    - [Running the Application](#running-the-application)
+      - [Option 1: Run Locally (without Docker)](#option-1-run-locally-without-docker)
+      - [Option 2: Run with Docker](#option-2-run-with-docker)
   - [📸 Timeline Preview](#-timeline-preview)
   - [Table of Contents](#table-of-contents)
   - [ℹ️ About](#ℹ️-about)
