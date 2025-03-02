@@ -49,4 +49,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-This project is maintained as an educational resource for those interested in tracking the evolution of artificial intelligence and machine learning technologies.
+This project is maintained as an educational resource for those interested in tracking the evolution of artificial intelligence and machine learning technologies. 

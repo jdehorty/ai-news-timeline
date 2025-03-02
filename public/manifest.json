@@ -1,6 +1,6 @@
 {
   "short_name": "AI Timeline",
-  "name": "AI News Timeline",
+  "name": "AI News Timeline - February 2025",
   "icons": [
     {
       "src": "favicon.ico",
@@ -12,4 +12,4 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
-}
+} 
