@@ -96,18 +96,22 @@ const getIcon = (iconType) => {
 // Get color based on category
 const getCategoryColor = (category) => {
   switch (category) {
-    case 'Major AI Model Releases':
+    case 'Model Releases':
       return '#3f51b5'; // Indigo
-    case 'Corporate AI Initiatives':
+    case 'Product Launches':
       return '#2196f3'; // Blue
-    case 'AI Research & Development':
+    case 'Research Breakthroughs':
       return '#009688'; // Teal
-    case 'AI Safety & Ethics':
+    case 'Corporate Partnerships':
+      return '#4caf50'; // Green
+    case 'Policy Regulation':
       return '#f44336'; // Red
-    case 'AI Tools & Applications':
-      return '#ff9800'; // Orange
-    case 'Industry News & Business':
+    case 'AI Ethics Safety':
+      return '#e91e63'; // Pink
+    case 'Industry Analysis':
       return '#9c27b0'; // Purple
+    case 'Robotics Automation':
+      return '#ff9800'; // Orange
     default:
       return '#757575'; // Grey
   }

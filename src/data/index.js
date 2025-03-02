@@ -6,14 +6,14 @@ import { marchData } from './march2025Data';
 // Categories for filtering
 export const categories = [
   "All",
-  "Model Releases & Updates",
+  "Model Releases",
   "Product Launches",
   "Research Breakthroughs",
   "Corporate Partnerships",
-  "Policy & Regulation",
-  "AI Ethics & Safety",
+  "Policy Regulation",
+  "AI Ethics Safety",
   "Industry Analysis",
-  "Robotics & Automation"
+  "Robotics Automation"
 ];
 
 // Companies for filtering

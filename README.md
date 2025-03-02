@@ -139,7 +139,7 @@ Key features you can try in the live demo:
 ## ✨ Features
 
 - **Chronological Timeline**: Events are organized by date and displayed in an intuitive timeline format
-- **Categorized Events**: Filter events by categories such as "Major AI Model Releases", "AI Research & Development", "AI Safety & Ethics", and more
+- **Categorized Events**: Filter events by categories such as "Model Releases", "Research Breakthroughs", "AI Ethics Safety", and more
 - **Company Filters**: Focus on developments from specific organizations
 - **Month Selection**: Navigate between different time periods
 - **Responsive Design**: Works on desktop and mobile devices

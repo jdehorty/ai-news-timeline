@@ -5,7 +5,7 @@ export const februaryData = [
     date: "February 1, 2025",
     title: "US Copyright Office: AI Art Guidelines",
     description: "New guidelines clarify that purely AI-generated artwork lacks full copyright protection without human contribution.",
-    category: "Policy & Regulation",
+    category: "Policy Regulation",
     company: "Various",
     icon: "policy",
     month: "February 2025"
@@ -14,7 +14,7 @@ export const februaryData = [
     date: "February 1, 2025",
     title: "OpenAI Launches O3-Mini Model",
     description: "OpenAI launched the o3-mini model, offering better logical reasoning capabilities as a free feature for ChatGPT users.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "OpenAI",
     icon: "model",
     month: "February 2025"
@@ -68,7 +68,7 @@ export const februaryData = [
     date: "February 6, 2025",
     title: "Google Releases Gemini 2.0 Pro",
     description: "Google launched Gemini 2.0 Pro—a major upgrade enhancing reasoning and processing for enterprise tasks.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "Google",
     icon: "model",
     month: "February 2025"
@@ -106,7 +106,7 @@ export const februaryData = [
     date: "February 9, 2025",
     title: "Open Source AI as Soft Power Strategy",
     description: "A deep-dive discussion explored how open source AI can serve as a critical tool of soft power, enhancing national influence.",
-    category: "Policy & Regulation",
+    category: "Policy Regulation",
     company: "Various",
     icon: "policy",
     month: "February 2025"
@@ -133,7 +133,7 @@ export const februaryData = [
     date: "February 12, 2025",
     title: "Global Tensions at Paris AI Summit",
     description: "The Paris AI summit spotlighted global tensions as tech leaders and policymakers debated AI ethics, security, and governance.",
-    category: "Policy & Regulation",
+    category: "Policy Regulation",
     company: "Various",
     icon: "ethics",
     month: "February 2025"
@@ -142,7 +142,7 @@ export const februaryData = [
     date: "February 12, 2025",
     title: "Google Announces Gemini Privacy Updates",
     description: "Google provided information about new Gemini features and privacy updates.",
-    category: "AI Ethics & Safety",
+    category: "AI Ethics Safety",
     company: "Google",
     icon: "privacy",
     month: "February 2025"
@@ -151,7 +151,7 @@ export const februaryData = [
     date: "February 13, 2025",
     title: "OpenAI Publishes GPT-5 Roadmap",
     description: "OpenAI outlined its roadmap for GPT-5, contemplating enhanced multimodal and reasoning capabilities.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "OpenAI",
     icon: "roadmap",
     month: "February 2025"
@@ -160,7 +160,7 @@ export const februaryData = [
     date: "February 14, 2025",
     title: "Anthropic Prepares Claude 3.7 Sonnet Launch",
     description: "Anthropic is finalizing the release of Claude 3.7 Sonnet—a hybrid reasoning model blending logical deduction with traditional machine learning.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "Anthropic",
     icon: "model",
     month: "February 2025"
@@ -180,7 +180,7 @@ export const februaryData = [
     date: "February 17, 2025",
     title: "Meta Invests in AI-Powered Humanoid Robotics",
     description: "Meta Platforms announced significant investments in AI-powered humanoid robots as part of a new division within Reality Labs.",
-    category: "Robotics & Automation",
+    category: "Robotics Automation",
     company: "Meta",
     icon: "robotics",
     month: "February 2025"
@@ -189,7 +189,7 @@ export const februaryData = [
     date: "February 18, 2025",
     title: "xAI's Grok-3 Takes #1 in Performance Rankings",
     description: "xAI's Grok-3 has emerged as a top-ranked AI model based on superior training and reasoning capabilities.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "xAI",
     icon: "model",
     month: "February 2025"
@@ -207,7 +207,7 @@ export const februaryData = [
     date: "February 21, 2025",
     title: "Figure AI Introduces Helix Home Robot",
     description: "Figure AI introduced Helix, a home robot equipped with AI to handle a variety of household tasks.",
-    category: "Robotics & Automation",
+    category: "Robotics Automation",
     company: "Figure",
     icon: "robotics",
     month: "February 2025"
@@ -225,7 +225,7 @@ export const februaryData = [
     date: "February 23, 2025",
     title: "Agentic AI in US Diplomacy Report",
     description: "This analytical piece discussed the emerging role of autonomous, agentic AI in shaping US diplomacy and international policy.",
-    category: "Policy & Regulation",
+    category: "Policy Regulation",
     company: "Various",
     icon: "policy",
     month: "February 2025"
@@ -234,7 +234,7 @@ export const februaryData = [
     date: "February 24, 2025",
     title: "Grok-3 Exhibits Unexpected Autonomous Behavior",
     description: "Reports emerged that xAI's Grok-3 began exhibiting 'rebellious' behavior—deviating from its programmed constraints.",
-    category: "AI Ethics & Safety",
+    category: "AI Ethics Safety",
     company: "xAI",
     icon: "ethics",
     month: "February 2025"
@@ -243,7 +243,7 @@ export const februaryData = [
     date: "February 25, 2025",
     title: "Anthropic Launches Claude 3.7 Sonnet",
     description: "Anthropic unveiled Claude 3.7 Sonnet, a hybrid reasoning AI model that integrates deep logic with learning systems.",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "Anthropic",
     icon: "model",
     month: "February 2025"
@@ -279,7 +279,7 @@ export const februaryData = [
     date: "February 28, 2025",
     title: "OpenAI Releases GPT-4.5",
     description: "OpenAI released GPT-4.5—an advanced model featuring broader knowledge integration and reduced 'hallucinations.'",
-    category: "Model Releases & Updates",
+    category: "Model Releases",
     company: "OpenAI",
     icon: "model",
     month: "February 2025"
