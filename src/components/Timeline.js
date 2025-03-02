@@ -20,7 +20,6 @@ import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import RouteIcon from '@mui/icons-material/Route';
 import EventIcon from '@mui/icons-material/Event';
 import AssistantIcon from '@mui/icons-material/Assistant';
-import ConstructionIcon from '@mui/icons-material/Construction';
 
 // Styled components
 import styled from 'styled-components';
