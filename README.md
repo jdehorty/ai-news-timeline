@@ -2,6 +2,10 @@
 
 A curated timeline of high-signal events in artificial intelligence and machine learning.
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge&logo=github)](https://jdehorty.github.io/ai-news-timeline)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/jdehorty/ai-news-timeline/deploy.yml?branch=main&style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/jdehorty/ai-news-timeline/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
 **[📊 View Live Timeline](https://jdehorty.github.io/ai-news-timeline)** - Check out the live deployment on GitHub Pages!
 
 ## Quick Start
@@ -67,10 +71,11 @@ The project aims to be a reliable historical record of AI progress, focusing on 
 ## Technology
 
 Built with:
-- React
-- Material UI
-- Styled Components
-- Docker (for development and deployment)
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)](https://mui.com/)
+[![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 ## Docker Setup
 
@@ -103,6 +108,8 @@ This will build the optimized production version and serve it on http://localhos
 
 ### Building for GitHub Pages
 
+[![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://jdehorty.github.io/ai-news-timeline)
+
 The project is automatically deployed to GitHub Pages using GitHub Actions. The live site is available at:
 **[https://jdehorty.github.io/ai-news-timeline](https://jdehorty.github.io/ai-news-timeline)**
 
@@ -125,6 +132,8 @@ npm run deploy
 This will build the project and push it to the `gh-pages` branch, which is configured to serve the GitHub Pages site.
 
 ## Contributing
+
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=for-the-badge)](https://github.com/jdehorty/ai-news-timeline/issues)
 
 Suggestions for events to include are welcome! Please open an issue with:
 - Event date
