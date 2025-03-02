@@ -111,7 +111,7 @@ Built with:
 
 ## 🐳 Docker Setup
 
-This project can be run using Docker, which ensures consistent development and deployment environments.
+This project uses a simplified Docker setup with a multi-stage Dockerfile that works for both development and production environments.
 
 ### 📋 Prerequisites
 

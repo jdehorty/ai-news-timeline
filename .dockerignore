@@ -1,12 +1,15 @@
 # Git
 .git
 .gitignore
+.github
 
 # Node.js
 node_modules
 npm-debug.log
 yarn-debug.log
 yarn-error.log
+.npm
+.yarn
 
 # Build
 build
@@ -14,19 +17,34 @@ dist
 
 # Docker
 Dockerfile
-Dockerfile.dev
 docker-compose.yml
 .dockerignore
 
 # IDE
 .vscode
 .idea
+*.sublime-*
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+*.log
 
-# Misc
+# Testing
+coverage
+.nyc_output
+__tests__
+__mocks__
+
+# Documentation
 README.md
 LICENSE
-.github 
+docs
+*.md
+
+# Environment variables
+.env
+.env.*
+!.env.example

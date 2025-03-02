@@ -5,7 +5,7 @@ services:
   dev:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      target: development
     ports:
       - "3000:3000"
     volumes:
@@ -19,7 +19,7 @@ services:
   prod:
     build:
       context: .
-      dockerfile: Dockerfile
+      target: production
     ports:
       - "3000:3000"
     environment:
