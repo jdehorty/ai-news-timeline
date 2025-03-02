@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import { timelineData, categories, companies, availableMonths } from './data/timelineData';
+import { timelineData, categories, companies, availableMonths, timelineDataByMonth } from './data';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Timeline from './components/Timeline';
@@ -94,12 +94,14 @@ function App() {
     window.history.pushState({}, '', newUrl);
   }, [selectedMonth, selectedCategory, selectedCompany]);
 
-  // Filter events based on selected month, category and company
-  const filteredEvents = timelineData.filter(event => {
-    const monthMatch = event.month === selectedMonth;
+  // Get the data for the selected month
+  const monthData = timelineDataByMonth[selectedMonth] || [];
+
+  // Filter events based on selected category and company
+  const filteredEvents = monthData.filter(event => {
     const categoryMatch = selectedCategory === 'All' || event.category === selectedCategory;
     const companyMatch = selectedCompany === 'All' || event.company === selectedCompany;
-    return monthMatch && categoryMatch && companyMatch;
+    return categoryMatch && companyMatch;
   });
 
   // Handle filter changes

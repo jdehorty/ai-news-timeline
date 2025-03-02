@@ -2,8 +2,8 @@
 export const marchData = [
   {
     date: "March 2025",
-    title: "Month in Progress",
-    description: "Month in Progress",
+    title: "In Progress",
+    description: "In Progress",
     category: "AI Research & Development",
     company: "Various",
     icon: "research",
