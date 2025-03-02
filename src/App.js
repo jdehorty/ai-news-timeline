@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import { timelineData, categories, companies, availableMonths, timelineDataByMonth } from './data';
+import { categories, companies, availableMonths, timelineDataByMonth } from './data';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Timeline from './components/Timeline';
