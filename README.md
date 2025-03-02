@@ -32,6 +32,44 @@ Built with:
 - React
 - Material UI
 - Styled Components
+- Docker (for development and deployment)
+
+## Docker Setup
+
+This project can be run using Docker, which ensures consistent development and deployment environments.
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Development Mode
+
+To run the application in development mode with hot-reloading:
+
+```bash
+docker-compose up dev
+```
+
+This will start the application on http://localhost:3000 with live reloading enabled.
+
+### Production Mode
+
+To build and run the production version:
+
+```bash
+docker-compose up prod
+```
+
+This will build the optimized production version and serve it on http://localhost:3000.
+
+### Building for GitHub Pages
+
+The project is configured to deploy to GitHub Pages using GitHub Actions. When you push to the main branch, the workflow will automatically:
+
+1. Build the Docker image
+2. Extract the build artifacts
+3. Deploy to GitHub Pages
 
 ## Contributing
 
