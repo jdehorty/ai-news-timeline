@@ -89,8 +89,8 @@ You have two options to run this application:
 ## 📸 Timeline Preview
 
 <div align="center">
-  <img src="public/timeline-screenshot.png" alt="AI News Timeline Screenshot" width="800">
-  <p><i>Note: Add a screenshot of your timeline to the public directory to display it here.</i></p>
+  <img src="https://i.gyazo.com/643257fdda37cad767ea9d1839354786.png" alt="AI News Timeline Screenshot" width="800">
+  <p><i>AI News Timeline showing the event filtering interface and chronological display of AI developments.</i></p>
 </div>
 
 ## Table of Contents
