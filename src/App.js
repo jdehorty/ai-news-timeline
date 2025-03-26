@@ -61,7 +61,7 @@ function App() {
 
   // State for filters
   const [selectedMonth, setSelectedMonth] = useState(
-    getInitialParamValue('month', availableMonths[0], availableMonths)
+    getInitialParamValue('month', availableMonths[availableMonths.length - 1], availableMonths)
   );
   const [selectedCategory, setSelectedCategory] = useState(
     getInitialParamValue('category', 'All', categories)
@@ -74,7 +74,7 @@ function App() {
   useEffect(() => {
     const params = new URLSearchParams();
     
-    if (selectedMonth !== availableMonths[0]) {
+    if (selectedMonth !== availableMonths[availableMonths.length - 1]) {
       params.set('month', selectedMonth);
     }
     

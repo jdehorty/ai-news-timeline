@@ -32,3 +32,6 @@ yarn-error.log*
 # Local environment variables
 .env
 build-test/
+*.bak
+/.venv
+*.json
