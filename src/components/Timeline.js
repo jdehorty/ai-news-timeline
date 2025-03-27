@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   VerticalTimeline, 
   VerticalTimelineElement 
@@ -118,6 +118,8 @@ const getCategoryColor = (category) => {
 };
 
 const Timeline = ({ events, selectedCategory, selectedCompany }) => {
+  const [visibleElements, setVisibleElements] = useState({});
+
   // Filter events based on selected category and company
   const filteredEvents = events.filter(event => {
     const categoryMatch = selectedCategory === 'All' || event.category === selectedCategory;
@@ -125,9 +127,22 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
     return categoryMatch && companyMatch;
   });
 
+  const handleVisibilityChange = (isVisible, index) => {
+    if (isVisible) {
+      setVisibleElements(prev => ({ ...prev, [index]: true }));
+    } else {
+      // When element leaves viewport completely, reset its visibility state
+      setVisibleElements(prev => {
+        const newState = { ...prev };
+        delete newState[index];
+        return newState;
+      });
+    }
+  };
+
   return (
     <TimelineWrapper>
-      <VerticalTimeline>
+      <VerticalTimeline animate={true}>
         {filteredEvents.map((event, index) => (
           <VerticalTimelineElement
             key={index}
@@ -135,6 +150,11 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
             dateClassName="timeline-date"
             iconStyle={{ background: getCategoryColor(event.category), color: '#fff' }}
             icon={getIcon(event.icon)}
+            onVisibilityChange={(isVisible) => handleVisibilityChange(isVisible, index)}
+            intersectionObserverProps={{
+              threshold: 0,
+              rootMargin: '-50px 0px -50px 0px'
+            }}
           >
             <h3 className="vertical-timeline-element-title">{event.title}</h3>
             <TimelineDate>{event.date}</TimelineDate>
