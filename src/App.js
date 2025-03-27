@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
+import { mantineTheme } from './mantine-theme';
 import { categories, companies, availableMonths, timelineDataByMonth } from './data';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -95,7 +99,9 @@ function App() {
   }, [selectedMonth, selectedCategory, selectedCompany]);
 
   // Get the data for the selected month
-  const monthData = timelineDataByMonth[selectedMonth] || [];
+  const monthData = selectedMonth === 'All' 
+    ? Object.values(timelineDataByMonth).flat() // Use all months data when "All" is selected
+    : timelineDataByMonth[selectedMonth] || [];
 
   // Filter events based on selected category and company
   const filteredEvents = monthData.filter(event => {
@@ -118,34 +124,36 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div className="App">
-        <Header />
-        <MainContent>
-          <Container maxWidth="lg">
-            <Filters 
-              categories={categories}
-              companies={companies}
-              selectedMonth={selectedMonth}
-              selectedCategory={selectedCategory}
-              selectedCompany={selectedCompany}
-              onMonthChange={handleMonthChange}
-              onCategoryChange={handleCategoryChange}
-              onCompanyChange={handleCompanyChange}
-              filteredEvents={filteredEvents}
-            />
-            <Timeline 
-              events={filteredEvents}
-              selectedMonth={selectedMonth}
-              selectedCategory={selectedCategory}
-              selectedCompany={selectedCompany}
-            />
-          </Container>
-        </MainContent>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <MantineProvider theme={mantineTheme}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="App">
+          <Header />
+          <MainContent>
+            <Container maxWidth="lg">
+              <Filters 
+                categories={categories}
+                companies={companies}
+                selectedMonth={selectedMonth}
+                selectedCategory={selectedCategory}
+                selectedCompany={selectedCompany}
+                onMonthChange={handleMonthChange}
+                onCategoryChange={handleCategoryChange}
+                onCompanyChange={handleCompanyChange}
+                filteredEvents={filteredEvents}
+              />
+              <Timeline 
+                events={filteredEvents}
+                selectedMonth={selectedMonth}
+                selectedCategory={selectedCategory}
+                selectedCompany={selectedCompany}
+              />
+            </Container>
+          </MainContent>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </MantineProvider>
   );
 }
 

@@ -97,21 +97,21 @@ const getIcon = (iconType) => {
 const getCategoryColor = (category) => {
   switch (category) {
     case 'Model Releases':
-      return '#3f51b5'; // Indigo
+      return '#0078D7'; // Tech blue - technology and innovation
     case 'Product Launches':
-      return '#2196f3'; // Blue
+      return '#E53935'; // Vibrant red - energy and excitement
     case 'Research Breakthroughs':
-      return '#009688'; // Teal
+      return '#8E24AA'; // Purple - creativity and discovery
     case 'Corporate Partnerships':
-      return '#4caf50'; // Green
+      return '#00796B'; // Teal - cooperation and stability
     case 'Policy Regulation':
-      return '#f44336'; // Red
+      return '#263238'; // Dark slate - authority and structure
     case 'AI Ethics Safety':
-      return '#e91e63'; // Pink
+      return '#FFC107'; // Amber/Yellow - caution and safety
     case 'Industry Analysis':
-      return '#9c27b0'; // Purple
+      return '#00ACC1'; // Cyan - data and clarity
     case 'Robotics Automation':
-      return '#ff9800'; // Orange
+      return '#78909C'; // Steel blue-gray - machinery and automation
     default:
       return '#757575'; // Grey
   }

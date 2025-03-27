@@ -41,6 +41,7 @@ export const companies = [
 
 // Available months for selection
 export const availableMonths = [
+  "All",
   "February 2025",
   "March 2025",
   // Add more months as you create data for them
