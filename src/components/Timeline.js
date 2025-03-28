@@ -20,7 +20,6 @@ import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import RouteIcon from '@mui/icons-material/Route';
 import EventIcon from '@mui/icons-material/Event';
 import AssistantIcon from '@mui/icons-material/Assistant';
-import RocketIcon from '@mui/icons-material/Rocket';
 
 // Styled components
 import styled from 'styled-components';
@@ -61,13 +60,7 @@ const TimelineDate = styled.div`
 `;
 
 // Map icon types to Material UI icons
-const getIcon = (iconType, category) => {
-  // If it's a Product Launch, always use rocket icon regardless of iconType
-  if (category === 'Product Launches') {
-    return <RocketIcon />;
-  }
-
-  // For other categories, use icon based on iconType
+const getIcon = (iconType) => {
   switch (iconType) {
     case 'model':
       return <SmartToyIcon />;
@@ -95,8 +88,6 @@ const getIcon = (iconType, category) => {
       return <RouteIcon />;
     case 'event':
       return <EventIcon />;
-    case 'product':
-      return <RocketIcon />;
     default:
       return <SmartButtonIcon />;
   }
@@ -158,7 +149,7 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
             date={event.date}
             dateClassName="timeline-date"
             iconStyle={{ background: getCategoryColor(event.category), color: '#fff' }}
-            icon={getIcon(event.icon, event.category)}
+            icon={getIcon(event.icon)}
             onVisibilityChange={(isVisible) => handleVisibilityChange(isVisible, index)}
             intersectionObserverProps={{
               threshold: 0,
