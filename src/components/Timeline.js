@@ -22,6 +22,7 @@ import EventIcon from '@mui/icons-material/Event';
 import AssistantIcon from '@mui/icons-material/Assistant';
 import RocketIcon from '@mui/icons-material/Rocket';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 // Styled components
 import styled from 'styled-components';
@@ -71,6 +72,16 @@ const getIcon = (iconType, category) => {
   // Ensure Industry Analysis always uses the chart icon
   if (category === 'Industry Analysis') {
     return <BarChartIcon />;
+  }
+  
+  // Ensure Policy Regulation always uses the file description icon
+  if (category === 'Policy Regulation') {
+    return <DescriptionIcon />;
+  }
+  
+  // Ensure Robotics Automation always uses the precision manufacturing icon
+  if (category === 'Robotics Automation') {
+    return <PrecisionManufacturingIcon />;
   }
   
   switch (iconType) {

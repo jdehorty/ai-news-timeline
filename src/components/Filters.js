@@ -32,7 +32,8 @@ import {
   Article,
   Settings,
   Users,
-  Photo
+  Photo,
+  Tool
 } from 'tabler-icons-react';
 import styled from 'styled-components';
 
@@ -90,7 +91,7 @@ const categoryEmojis = {
   "Policy Regulation": "📜",
   "AI Ethics Safety": "🛡️",
   "Industry Analysis": "📊",
-  "Robotics Automation": "🤖"
+  "Robotics Automation": "🦾"
 };
 
 // Map companies to emoji
@@ -160,7 +161,7 @@ const Filters = ({
     "Policy Regulation": <FileDescription size={14} style={{color: '#263238'}} />, // Dark slate - represents authority and structure
     "AI Ethics Safety": <Shield size={14} style={{color: '#FFC107'}} />, // Amber/Yellow - represents caution and safety
     "Industry Analysis": <ChartBar size={14} style={{color: '#00ACC1'}} />, // Cyan - represents data and clarity
-    "Robotics Automation": <Robot size={14} style={{color: '#78909C'}} /> // Steel blue-gray - represents machinery and automation
+    "Robotics Automation": <Tool size={14} style={{color: '#78909C'}} /> // Steel blue-gray - represents machinery and automation
   };
 
   // Company icons mapping with standardized colors
