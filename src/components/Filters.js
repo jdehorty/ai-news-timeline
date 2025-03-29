@@ -340,11 +340,16 @@ const Filters = ({
               leftSection={categoryIcons[category] || <FileDescription size={14} style={{color: '#263238'}} />}
               styles={{
                 root: {
-                  paddingLeft: '8px'
+                  paddingLeft: '8px',
+                  cursor: 'pointer'
                 },
                 section: {
                   marginRight: '4px'
                 }
+              }}
+              onClick={() => {
+                onCategoryChange({ target: { value: category } });
+                setSelectedCategories([category]);
               }}
             >
               {category}: {count}
@@ -368,11 +373,16 @@ const Filters = ({
                 leftSection={companyIcons[company] || <Building size={14} />}
                 styles={{
                   root: {
-                    paddingLeft: '8px'
+                    paddingLeft: '8px',
+                    cursor: 'pointer'
                   },
                   section: {
                     marginRight: '4px'
                   }
+                }}
+                onClick={() => {
+                  onCompanyChange({ target: { value: company } });
+                  setSelectedCompanies([company]);
                 }}
               >
                 {company}: {count}
