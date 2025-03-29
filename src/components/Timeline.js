@@ -20,6 +20,8 @@ import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import RouteIcon from '@mui/icons-material/Route';
 import EventIcon from '@mui/icons-material/Event';
 import AssistantIcon from '@mui/icons-material/Assistant';
+import RocketIcon from '@mui/icons-material/Rocket';
+import BarChartIcon from '@mui/icons-material/BarChart';
 
 // Styled components
 import styled from 'styled-components';
@@ -60,7 +62,17 @@ const TimelineDate = styled.div`
 `;
 
 // Map icon types to Material UI icons
-const getIcon = (iconType) => {
+const getIcon = (iconType, category) => {
+  // Ensure Product Launches always use the rocket icon
+  if (category === 'Product Launches') {
+    return <RocketIcon />;
+  }
+  
+  // Ensure Industry Analysis always uses the chart icon
+  if (category === 'Industry Analysis') {
+    return <BarChartIcon />;
+  }
+  
   switch (iconType) {
     case 'model':
       return <SmartToyIcon />;
@@ -139,7 +151,7 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
             date={event.date}
             dateClassName="timeline-date"
             iconStyle={{ background: getCategoryColor(event.category), color: '#fff' }}
-            icon={getIcon(event.icon)}
+            icon={getIcon(event.icon, event.category)}
             onVisibilityChange={(isVisible) => handleVisibilityChange(isVisible, index)}
             intersectionObserverProps={{
               threshold: 0,
