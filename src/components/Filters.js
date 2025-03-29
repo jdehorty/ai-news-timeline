@@ -114,17 +114,29 @@ const Filters = ({
   // Calculate stats
   const totalEvents = filteredEvents.length;
 
-  // Count events by category
+  // Count events by category (from filtered events)
   const categoryStats = filteredEvents.reduce((acc, event) => {
     acc[event.category] = (acc[event.category] || 0) + 1;
     return acc;
   }, {});
 
-  // Count events by company
+  // Ensure all categories are represented in the display
+  const allCategoryStats = {};
+  categories.forEach(category => {
+    allCategoryStats[category] = categoryStats[category] || 0;
+  });
+  
+  // Count events by company (from filtered events)
   const companyStats = filteredEvents.reduce((acc, event) => {
     acc[event.company] = (acc[event.company] || 0) + 1;
     return acc;
   }, {});
+
+  // Ensure top companies are always shown
+  const allCompanyStats = {};
+  companies.forEach(company => {
+    allCompanyStats[company] = companyStats[company] || 0;
+  });
 
   // Category icons mapping with intuitive colors based on color theory - using Material UI icons
   const categoryIcons = {
@@ -132,7 +144,7 @@ const Filters = ({
     "Product Launches": <MuiIconWrapper style={{ color: '#E53935' }}><RocketIcon fontSize="small" style={{ color: '#E53935' }} /></MuiIconWrapper>, // Vibrant red - energy and excitement
     "Research Breakthroughs": <MuiIconWrapper style={{ color: '#8E24AA' }}><ScienceIcon fontSize="small" style={{ color: '#8E24AA' }} /></MuiIconWrapper>, // Purple - creativity and discovery
     "Corporate Partnerships": <MuiIconWrapper style={{ color: '#00796B' }}><HandshakeIcon fontSize="small" style={{ color: '#00796B' }} /></MuiIconWrapper>, // Teal - cooperation and stability
-    "Policy Regulation": <MuiIconWrapper style={{ color: '#263238' }}><DescriptionIcon fontSize="small" style={{ color: '#263238' }} /></MuiIconWrapper>, // Dark slate - authority and structure
+    "Policy Regulation": <MuiIconWrapper style={{ color: '#3F51B5' }}><DescriptionIcon fontSize="small" style={{ color: '#3F51B5' }} /></MuiIconWrapper>, // Indigo - authority and structure with elegance
     "AI Ethics Safety": <MuiIconWrapper style={{ color: '#FFC107' }}><SecurityIcon fontSize="small" style={{ color: '#FFC107' }} /></MuiIconWrapper>, // Amber/Yellow - caution and safety
     "Industry Analysis": <MuiIconWrapper style={{ color: '#00ACC1' }}><BarChartIcon fontSize="small" style={{ color: '#00ACC1' }} /></MuiIconWrapper>, // Cyan - data and clarity
     "Robotics Automation": <MuiIconWrapper style={{ color: '#78909C' }}><PrecisionManufacturingIcon fontSize="small" style={{ color: '#78909C' }} /></MuiIconWrapper> // Steel blue-gray - machinery and automation
@@ -166,7 +178,7 @@ const Filters = ({
     "Product Launches": "red",
     "Research Breakthroughs": "grape",
     "Corporate Partnerships": "teal",
-    "Policy Regulation": "gray",
+    "Policy Regulation": "indigo",
     "AI Ethics Safety": "yellow",
     "Industry Analysis": "cyan",
     "Robotics Automation": "indigo"
@@ -291,66 +303,77 @@ const Filters = ({
         Showing {totalEvents} events
       </EventCount>
 
-      {/* Show category stats only if no specific categories are selected */}
-      {selectedCategories.length === 0 && Object.entries(categoryStats).length > 0 && (
-        <StatsContainer>
-          {Object.entries(categoryStats).map(([category, count]) => {
-            // Special handling for Corporate Partnerships
-            const iconToRender = category === "Corporate Partnerships"
-              ? <BadgeIconWrapper style={{ color: '#00796B' }}><HandshakeIcon fontSize="small" style={{ color: '#00796B' }} /></BadgeIconWrapper>
-              : <BadgeIconWrapper style={{ color: categoryIcons[category]?.props?.style?.color }}>
-                {categoryIcons[category]?.props?.children ||
-                  <DescriptionIcon fontSize="small" style={{ color: '#263238' }} />}
-              </BadgeIconWrapper>;
+      {/* Always show all categories */}
+      <StatsContainer>
+        {Object.entries(allCategoryStats).map(([category, count]) => {
+          // Special handling for Corporate Partnerships
+          const iconToRender = category === "Corporate Partnerships"
+            ? <BadgeIconWrapper style={{ color: '#00796B' }}><HandshakeIcon fontSize="small" style={{ color: '#00796B' }} /></BadgeIconWrapper>
+            : <BadgeIconWrapper style={{ color: categoryIcons[category]?.props?.style?.color }}>
+              {categoryIcons[category]?.props?.children ||
+                <DescriptionIcon fontSize="small" style={{ color: '#3F51B5' }} />}
+            </BadgeIconWrapper>;
+          
+          // Check if this category is currently selected
+          const isSelected = selectedCategories.includes(category);
 
+          return (
+            <Badge
+              key={category}
+              size="md"
+              radius="sm"
+              variant={isSelected ? "filled" : "light"}
+              gradient={undefined}
+              color={categoryColors[category] || "gray"}
+              leftSection={iconToRender}
+              styles={{
+                root: {
+                  paddingLeft: '10px',
+                  paddingRight: '12px',
+                  paddingTop: '6px',
+                  paddingBottom: '6px',
+                  cursor: 'pointer',
+                  fontWeight: isSelected ? 'bold' : 'normal',
+                  opacity: count === 0 ? 0.5 : (isSelected ? 1 : 0.85)
+                },
+                section: {
+                  marginRight: '8px'
+                },
+                label: {
+                  fontSize: '0.85rem'
+                }
+              }}
+              onClick={() => {
+                if (isSelected) {
+                  // If already selected, remove it from selection
+                  onCategoryChange(selectedCategories.filter(cat => cat !== category));
+                } else {
+                  // If not selected, add it to the current selection
+                  onCategoryChange([...selectedCategories, category]);
+                }
+              }}
+            >
+              {category}: {count}
+            </Badge>
+          );
+        })}
+      </StatsContainer>
+
+      {/* Show top companies */}
+      <StatsContainer>
+        {Object.entries(allCompanyStats)
+          .sort((a, b) => b[1] - a[1]) // Sort by count descending
+          .slice(0, 5) // Show top 5
+          .map(([company, count]) => {
+            // Check if this company is currently selected
+            const isSelected = selectedCompanies.includes(company);
+            
             return (
-              <Badge
-                key={category}
-                size="md"
-                radius="sm"
-                variant="light"
-                gradient={undefined}
-                color={categoryColors[category] || "gray"}
-                leftSection={iconToRender}
-                styles={{
-                  root: {
-                    paddingLeft: '10px',
-                    paddingRight: '12px',
-                    paddingTop: '6px',
-                    paddingBottom: '6px',
-                    cursor: 'pointer',
-                    fontWeight: 'normal'
-                  },
-                  section: {
-                    marginRight: '8px'
-                  },
-                  label: {
-                    fontSize: '0.85rem'
-                  }
-                }}
-                onClick={() => {
-                  onCategoryChange([category]);
-                }}
-              >
-                {category}: {count}
-              </Badge>
-            );
-          })}
-        </StatsContainer>
-      )}
-
-      {/* Show company stats only if no specific companies are selected */}
-      {selectedCompanies.length === 0 && Object.entries(companyStats).length > 0 && (
-        <StatsContainer>
-          {Object.entries(companyStats)
-            .sort((a, b) => b[1] - a[1]) // Sort by count descending
-            .slice(0, 5) // Show top 5
-            .map(([company, count]) => (
               <Badge
                 key={company}
                 size="md"
                 radius="sm"
-                variant="light"
+                variant={isSelected ? "filled" : "light"}
                 color="indigo"
                 leftSection={companyIcons[company] || <Building size={14} />}
                 styles={{
@@ -359,7 +382,9 @@ const Filters = ({
                     paddingRight: '12px',
                     paddingTop: '6px',
                     paddingBottom: '6px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    fontWeight: isSelected ? 'bold' : 'normal',
+                    opacity: count === 0 ? 0.5 : (isSelected ? 1 : 0.85)
                   },
                   section: {
                     marginRight: '8px'
@@ -369,14 +394,20 @@ const Filters = ({
                   }
                 }}
                 onClick={() => {
-                  onCompanyChange([company]);
+                  if (isSelected) {
+                    // If already selected, remove it from selection
+                    onCompanyChange(selectedCompanies.filter(comp => comp !== company));
+                  } else {
+                    // If not selected, add it to the current selection
+                    onCompanyChange([...selectedCompanies, company]);
+                  }
                 }}
               >
                 {company}: {count}
               </Badge>
-            ))}
-        </StatsContainer>
-      )}
+            );
+          })}
+      </StatsContainer>
     </FiltersContainer>
   );
 };

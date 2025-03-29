@@ -128,7 +128,7 @@ const getCategoryColor = (category) => {
     case 'Corporate Partnerships':
       return '#00796B'; // Teal - cooperation and stability
     case 'Policy Regulation':
-      return '#263238'; // Dark slate - authority and structure
+      return '#3F51B5'; // Indigo - authority and structure with elegance
     case 'AI Ethics Safety':
       return '#FFC107'; // Amber/Yellow - caution and safety
     case 'Industry Analysis':
