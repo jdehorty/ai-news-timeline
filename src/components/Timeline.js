@@ -118,8 +118,6 @@ const getCategoryColor = (category) => {
 };
 
 const Timeline = ({ events, selectedCategory, selectedCompany }) => {
-  const [visibleElements, setVisibleElements] = useState({});
-
   // Filter events based on selected category and company
   const filteredEvents = events.filter(event => {
     const categoryMatch = selectedCategory === 'All' || event.category === selectedCategory;
@@ -128,16 +126,8 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
   });
 
   const handleVisibilityChange = (isVisible, index) => {
-    if (isVisible) {
-      setVisibleElements(prev => ({ ...prev, [index]: true }));
-    } else {
-      // When element leaves viewport completely, reset its visibility state
-      setVisibleElements(prev => {
-        const newState = { ...prev };
-        delete newState[index];
-        return newState;
-      });
-    }
+    // This function is used in onVisibilityChange but doesn't need to update state
+    // as visibleElements isn't being used elsewhere
   };
 
   return (

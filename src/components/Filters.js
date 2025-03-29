@@ -11,7 +11,6 @@ import {
 } from '@mantine/core';
 import { 
   Calendar, 
-  Search, 
   FilterOff, 
   Robot, 
   Rocket, 
@@ -22,7 +21,6 @@ import {
   ChartBar,
   DeviceDesktop,
   BrandGoogle,
-  BrandTwitter,
   BrandFacebook,
   BrandApple,
   BrandAmazon,
