@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Paper, Typography, Grid, useTheme as useMuiTheme } from '@mui/material';
 import { 
   MultiSelect, 
@@ -7,14 +7,11 @@ import {
   Text, 
   Tooltip, 
   ActionIcon,
-  Badge,
-  Pill,
-  Combobox
+  Badge
 } from '@mantine/core';
 import { 
   Calendar, 
   FilterOff, 
-  Robot, 
   Rocket, 
   Flask, 
   Building, 
@@ -60,28 +57,6 @@ const EventCount = styled(Text)`
   font-size: 0.9rem;
 `;
 
-// For Product Launches category
-const ProductLaunchesTag = ({ label, onRemove, classNames, ...others }) => (
-  <div className={classNames?.value} {...others}>
-    <span style={{ display: 'flex', alignItems: 'center' }}>
-      <span style={{ marginRight: '5px' }}>🚀</span> {/* Simple emoji as a fallback */}
-      {label}
-    </span>
-    <button className={classNames?.closeButton} onClick={onRemove} />
-  </div>
-);
-
-// For Industry Analysis category
-const IndustryAnalysisTag = ({ label, onRemove, classNames, ...others }) => (
-  <div className={classNames?.value} {...others}>
-    <span style={{ display: 'flex', alignItems: 'center' }}>
-      <span style={{ marginRight: '5px' }}>📊</span> {/* Simple emoji as a fallback */}
-      {label}
-    </span>
-    <button className={classNames?.closeButton} onClick={onRemove} />
-  </div>
-);
-
 // Map categories to emoji
 const categoryEmojis = {
   "Model Releases": "💻",
@@ -115,6 +90,13 @@ const companyEmojis = {
   "Stability AI": "🖼️",
   "Various": "🔄"
 };
+
+// Available months array for dropdown
+const availableMonths = [
+  "All",
+  "February 2025",
+  "March 2025"
+];
 
 const Filters = ({ 
   categories, 
@@ -175,7 +157,7 @@ const Filters = ({
     "Meta": <BrandFacebook size={14} style={{color: '#1877f2'}} />,
     "Amazon": <BrandAmazon size={14} style={{color: '#ff9900'}} />,
     "DeepMind": <Brain size={14} style={{color: '#ea4335'}} />,
-    "Figure": <Robot size={14} style={{color: '#6c757d'}} />,
+    "Figure": <Tool size={14} style={{color: '#6c757d'}} />,
     "LangChain": <Code size={14} style={{color: '#00C49A'}} />,
     "LessWrong": <Article size={14} style={{color: '#7b8794'}} />,
     "Sourcegraph": <Code size={14} style={{color: '#00b4f2'}} />,
@@ -401,12 +383,5 @@ const Filters = ({
     </FiltersContainer>
   );
 };
-
-// Available months array for dropdown
-const availableMonths = [
-  "All",
-  "February 2025",
-  "March 2025"
-];
 
 export default Filters; 
