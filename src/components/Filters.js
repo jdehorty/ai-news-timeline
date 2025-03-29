@@ -258,6 +258,17 @@ const Filters = ({
                 <div>{option.label}</div>
               </Group>
             )}
+            valueComponent={({ value, onRemove, ...others }) => {
+              const categoryItem = categoryData.find(item => item.value === value);
+              return (
+                <div {...others}>
+                  <Group gap="xs" style={{ paddingLeft: 6, paddingRight: 8 }}>
+                    {categoryItem?.leftSection}
+                    <span>{value}</span>
+                  </Group>
+                </div>
+              );
+            }}
           />
         </Grid>
 
@@ -279,6 +290,17 @@ const Filters = ({
                 <div>{option.label}</div>
               </Group>
             )}
+            valueComponent={({ value, onRemove, ...others }) => {
+              const companyItem = companyData.find(item => item.value === value);
+              return (
+                <div {...others}>
+                  <Group gap="xs" style={{ paddingLeft: 6, paddingRight: 8 }}>
+                    {companyItem?.leftSection}
+                    <span>{value}</span>
+                  </Group>
+                </div>
+              );
+            }}
           />
         </Grid>
       </Grid>
