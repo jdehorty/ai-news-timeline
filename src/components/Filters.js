@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Paper, Typography, Grid, useTheme as useMuiTheme } from '@mui/material';
 import { 
   MultiSelect, 
@@ -7,7 +7,9 @@ import {
   Text, 
   Tooltip, 
   ActionIcon,
-  Badge
+  Badge,
+  Pill,
+  Combobox
 } from '@mantine/core';
 import { 
   Calendar, 
@@ -56,6 +58,62 @@ const EventCount = styled(Text)`
   opacity: 0.7;
   font-size: 0.9rem;
 `;
+
+// For Product Launches category
+const ProductLaunchesTag = ({ label, onRemove, classNames, ...others }) => (
+  <div className={classNames?.value} {...others}>
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <span style={{ marginRight: '5px' }}>🚀</span> {/* Simple emoji as a fallback */}
+      {label}
+    </span>
+    <button className={classNames?.closeButton} onClick={onRemove} />
+  </div>
+);
+
+// For Industry Analysis category
+const IndustryAnalysisTag = ({ label, onRemove, classNames, ...others }) => (
+  <div className={classNames?.value} {...others}>
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <span style={{ marginRight: '5px' }}>📊</span> {/* Simple emoji as a fallback */}
+      {label}
+    </span>
+    <button className={classNames?.closeButton} onClick={onRemove} />
+  </div>
+);
+
+// Map categories to emoji
+const categoryEmojis = {
+  "Model Releases": "💻",
+  "Product Launches": "🚀",
+  "Research Breakthroughs": "🧪",
+  "Corporate Partnerships": "🤝",
+  "Policy Regulation": "📜",
+  "AI Ethics Safety": "🛡️",
+  "Industry Analysis": "📊",
+  "Robotics Automation": "🤖"
+};
+
+// Map companies to emoji
+const companyEmojis = {
+  "OpenAI": "🧠",
+  "Google": "🔍",
+  "Anthropic": "🧠",
+  "xAI": "🚀",
+  "Mistral AI": "🧠",
+  "ByteDance": "👥",
+  "Meta": "👤",
+  "Amazon": "📦",
+  "DeepMind": "🧠",
+  "Figure": "🤖",
+  "LangChain": "⛓️",
+  "LessWrong": "📝",
+  "Sourcegraph": "🔍",
+  "Descript": "🎙️",
+  "Microsoft": "🪟",
+  "Apple": "🍎",
+  "Stability AI": "🖼️",
+  "Various": "🔄"
+};
 
 const Filters = ({ 
   categories, 
@@ -182,7 +240,7 @@ const Filters = ({
     .filter(cat => cat !== 'All')
     .map(cat => ({ 
       value: cat, 
-      label: cat,
+      label: `${categoryEmojis[cat] || ''} ${cat}`,
       leftSection: categoryIcons[cat]
     }));
 
@@ -190,7 +248,7 @@ const Filters = ({
     .filter(comp => comp !== 'All')
     .map(comp => ({ 
       value: comp, 
-      label: comp,
+      label: `${companyEmojis[comp] || ''} ${comp}`,
       leftSection: companyIcons[comp] || <Building size={14} />
     }));
 
@@ -255,20 +313,9 @@ const Filters = ({
             renderOption={({ option, checked }) => (
               <Group gap="xs">
                 {option.leftSection}
-                <div>{option.label}</div>
+                <div>{option.label.split(' ').slice(1).join(' ')}</div>
               </Group>
             )}
-            valueComponent={({ value, onRemove, ...others }) => {
-              const categoryItem = categoryData.find(item => item.value === value);
-              return (
-                <div {...others}>
-                  <Group gap="xs" style={{ paddingLeft: 6, paddingRight: 8 }}>
-                    {categoryItem?.leftSection}
-                    <span>{value}</span>
-                  </Group>
-                </div>
-              );
-            }}
           />
         </Grid>
 
@@ -287,20 +334,9 @@ const Filters = ({
             renderOption={({ option, checked }) => (
               <Group gap="xs">
                 {option.leftSection}
-                <div>{option.label}</div>
+                <div>{option.label.split(' ').slice(1).join(' ')}</div>
               </Group>
             )}
-            valueComponent={({ value, onRemove, ...others }) => {
-              const companyItem = companyData.find(item => item.value === value);
-              return (
-                <div {...others}>
-                  <Group gap="xs" style={{ paddingLeft: 6, paddingRight: 8 }}>
-                    {companyItem?.leftSection}
-                    <span>{value}</span>
-                  </Group>
-                </div>
-              );
-            }}
           />
         </Grid>
       </Grid>
