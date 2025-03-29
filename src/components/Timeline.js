@@ -140,13 +140,9 @@ const getCategoryColor = (category) => {
   }
 };
 
-const Timeline = ({ events, selectedCategory, selectedCompany }) => {
-  // Filter events based on selected category and company
-  const filteredEvents = events.filter(event => {
-    const categoryMatch = selectedCategory === 'All' || event.category === selectedCategory;
-    const companyMatch = selectedCompany === 'All' || event.company === selectedCompany;
-    return categoryMatch && companyMatch;
-  });
+const Timeline = ({ events, selectedCategories, selectedCompanies }) => {
+  // No need to filter events again as they are already filtered in App.js
+  // We just use the events passed directly
 
   const handleVisibilityChange = (isVisible, index) => {
     // This function is used in onVisibilityChange but doesn't need to update state
@@ -156,7 +152,7 @@ const Timeline = ({ events, selectedCategory, selectedCompany }) => {
   return (
     <TimelineWrapper>
       <VerticalTimeline animate={true}>
-        {filteredEvents.map((event, index) => (
+        {events.map((event, index) => (
           <VerticalTimelineElement
             key={index}
             date={event.date}

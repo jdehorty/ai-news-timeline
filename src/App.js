@@ -63,15 +63,32 @@ function App() {
     return defaultValue;
   };
 
+  // Get initial array values from URL parameters (comma-separated)
+  const getInitialArrayParamValue = (paramName, allowedValues) => {
+    const params = new URLSearchParams(window.location.search);
+    const paramValue = params.get(paramName);
+    
+    if (paramValue) {
+      const values = paramValue.split(',');
+      // Only include values that are in the allowedValues array
+      return values.filter(value => allowedValues.includes(value));
+    }
+    return [];
+  };
+
   // State for filters
   const [selectedMonth, setSelectedMonth] = useState(
     getInitialParamValue('month', availableMonths[availableMonths.length - 1], availableMonths)
   );
-  const [selectedCategory, setSelectedCategory] = useState(
-    getInitialParamValue('category', 'All', categories)
+  
+  // selectedCategories is now an array. Empty array => show all categories.
+  const [selectedCategories, setSelectedCategories] = useState(
+    getInitialArrayParamValue('categories', categories.filter(c => c !== 'All'))
   );
-  const [selectedCompany, setSelectedCompany] = useState(
-    getInitialParamValue('company', 'All', companies)
+  
+  // selectedCompanies is now an array. Empty array => show all companies.
+  const [selectedCompanies, setSelectedCompanies] = useState(
+    getInitialArrayParamValue('companies', companies.filter(c => c !== 'All'))
   );
 
   // Update URL when filters change
@@ -82,12 +99,12 @@ function App() {
       params.set('month', selectedMonth);
     }
     
-    if (selectedCategory !== 'All') {
-      params.set('category', selectedCategory);
+    if (selectedCategories.length > 0) {
+      params.set('categories', selectedCategories.join(','));
     }
     
-    if (selectedCompany !== 'All') {
-      params.set('company', selectedCompany);
+    if (selectedCompanies.length > 0) {
+      params.set('companies', selectedCompanies.join(','));
     }
     
     // Update the URL without refreshing the page
@@ -96,31 +113,41 @@ function App() {
       : window.location.pathname;
       
     window.history.pushState({}, '', newUrl);
-  }, [selectedMonth, selectedCategory, selectedCompany]);
+  }, [selectedMonth, selectedCategories, selectedCompanies]);
 
   // Get the data for the selected month
   const monthData = selectedMonth === 'All' 
     ? Object.values(timelineDataByMonth).flat() // Use all months data when "All" is selected
     : timelineDataByMonth[selectedMonth] || [];
 
-  // Filter events based on selected category and company
-  const filteredEvents = monthData.filter(event => {
-    const categoryMatch = selectedCategory === 'All' || event.category === selectedCategory;
-    const companyMatch = selectedCompany === 'All' || event.company === selectedCompany;
+  // -- FILTERING LOGIC FOR MULTIPLE SELECTIONS --
+  const filteredEvents = monthData.filter((event) => {
+    // If selectedCategories is empty => match everything, else must match at least one category
+    const categoryMatch = 
+      selectedCategories.length === 0 || 
+      selectedCategories.includes(event.category);
+
+    // If selectedCompanies is empty => match everything, else must match at least one company
+    const companyMatch = 
+      selectedCompanies.length === 0 || 
+      selectedCompanies.includes(event.company);
+
     return categoryMatch && companyMatch;
   });
 
-  // Handle filter changes
+  // Handlers
   const handleMonthChange = (event) => {
-    setSelectedMonth(event.target.value);
+    setSelectedMonth(event.target.value || 'All');
   };
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
+  // Handle array of categories
+  const handleCategoryChange = (categoriesArray) => {
+    setSelectedCategories(categoriesArray);
   };
 
-  const handleCompanyChange = (event) => {
-    setSelectedCompany(event.target.value);
+  // Handle array of companies
+  const handleCompanyChange = (companiesArray) => {
+    setSelectedCompanies(companiesArray);
   };
 
   return (
@@ -132,11 +159,11 @@ function App() {
           <MainContent>
             <Container maxWidth="lg">
               <Filters 
-                categories={categories}
-                companies={companies}
+                categories={categories.filter(c => c !== 'All')}
+                companies={companies.filter(c => c !== 'All')}
                 selectedMonth={selectedMonth}
-                selectedCategory={selectedCategory}
-                selectedCompany={selectedCompany}
+                selectedCategories={selectedCategories}
+                selectedCompanies={selectedCompanies}
                 onMonthChange={handleMonthChange}
                 onCategoryChange={handleCategoryChange}
                 onCompanyChange={handleCompanyChange}
@@ -145,8 +172,8 @@ function App() {
               <Timeline 
                 events={filteredEvents}
                 selectedMonth={selectedMonth}
-                selectedCategory={selectedCategory}
-                selectedCompany={selectedCompany}
+                selectedCategories={selectedCategories}
+                selectedCompanies={selectedCompanies}
               />
             </Container>
           </MainContent>

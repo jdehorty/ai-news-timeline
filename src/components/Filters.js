@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Paper, Typography, Grid, useTheme as useMuiTheme } from '@mui/material';
 import {
   MultiSelect,
@@ -101,8 +101,8 @@ const BadgeIconWrapper = ({ children, style = {} }) => (
 const Filters = ({
   categories,
   companies,
-  selectedCategory,
-  selectedCompany,
+  selectedCategories,
+  selectedCompanies,
   selectedMonth,
   onCategoryChange,
   onCompanyChange,
@@ -110,14 +110,6 @@ const Filters = ({
   filteredEvents
 }) => {
   const muiTheme = useMuiTheme();
-
-  // State for multi-select categories and companies
-  const [selectedCategories, setSelectedCategories] = useState(
-    selectedCategory === 'All' ? [] : [selectedCategory]
-  );
-  const [selectedCompanies, setSelectedCompanies] = useState(
-    selectedCompany === 'All' ? [] : [selectedCompany]
-  );
 
   // Calculate stats
   const totalEvents = filteredEvents.length;
@@ -180,60 +172,31 @@ const Filters = ({
     "Robotics Automation": "indigo"
   };
 
-  // Handle multi-select category change
-  const handleCategoryMultiChange = (values) => {
-    setSelectedCategories(values);
-    // If no categories selected or "All" is selected, set filter to "All"
-    if (values.length === 0) {
-      onCategoryChange({ target: { value: 'All' } });
-    } else {
-      // Currently we're only supporting single selection in the filter logic
-      onCategoryChange({ target: { value: values[0] } });
-    }
-  };
-
-  // Handle multi-select company change
-  const handleCompanyMultiChange = (values) => {
-    setSelectedCompanies(values);
-    // If no companies selected or "All" is selected, set filter to "All"
-    if (values.length === 0) {
-      onCompanyChange({ target: { value: 'All' } });
-    } else {
-      // Currently we're only supporting single selection in the filter logic
-      onCompanyChange({ target: { value: values[0] } });
-    }
-  };
-
-  // Handler to reset all filters to "All"
+  // Handler to reset all filters to default values
   const handleClearFilters = () => {
     onMonthChange({ target: { value: 'All' } });
-    onCategoryChange({ target: { value: 'All' } });
-    onCompanyChange({ target: { value: 'All' } });
-    setSelectedCategories([]);
-    setSelectedCompanies([]);
+    onCategoryChange([]);
+    onCompanyChange([]);
   };
 
   // Check if any filters are actively applied
-  const areFiltersActive = selectedMonth !== 'All' ||
-    selectedCategory !== 'All' ||
-    selectedCompany !== 'All';
+  const areFiltersActive = 
+    selectedMonth !== 'All' ||
+    selectedCategories.length > 0 ||
+    selectedCompanies.length > 0;
 
   // Prepare data for dropdowns with icons
-  const categoryData = categories
-    .filter(cat => cat !== 'All')
-    .map(cat => ({
-      value: cat,
-      label: cat,
-      leftSection: categoryIcons[cat]
-    }));
+  const categoryData = categories.map(cat => ({
+    value: cat,
+    label: cat,
+    leftSection: categoryIcons[cat]
+  }));
 
-  const companyData = companies
-    .filter(comp => comp !== 'All')
-    .map(comp => ({
-      value: comp,
-      label: comp,
-      leftSection: companyIcons[comp] || <Building size={14} />
-    }));
+  const companyData = companies.map(comp => ({
+    value: comp,
+    label: comp,
+    leftSection: companyIcons[comp] || <Building size={14} />
+  }));
 
   return (
     <FiltersContainer elevation={0}>
@@ -288,7 +251,7 @@ const Filters = ({
             label="Category"
             data={categoryData}
             value={selectedCategories}
-            onChange={handleCategoryMultiChange}
+            onChange={onCategoryChange}
             searchable
             clearable
             checkIconPosition="right"
@@ -309,7 +272,7 @@ const Filters = ({
             label="Company"
             data={companyData}
             value={selectedCompanies}
-            onChange={handleCompanyMultiChange}
+            onChange={onCompanyChange}
             searchable
             clearable
             checkIconPosition="right"
@@ -328,7 +291,8 @@ const Filters = ({
         Showing {totalEvents} events
       </EventCount>
 
-      {selectedCategory === 'All' && Object.entries(categoryStats).length > 0 && (
+      {/* Show category stats only if no specific categories are selected */}
+      {selectedCategories.length === 0 && Object.entries(categoryStats).length > 0 && (
         <StatsContainer>
           {Object.entries(categoryStats).map(([category, count]) => {
             // Special handling for Corporate Partnerships
@@ -365,8 +329,7 @@ const Filters = ({
                   }
                 }}
                 onClick={() => {
-                  onCategoryChange({ target: { value: category } });
-                  setSelectedCategories([category]);
+                  onCategoryChange([category]);
                 }}
               >
                 {category}: {count}
@@ -376,7 +339,8 @@ const Filters = ({
         </StatsContainer>
       )}
 
-      {selectedCompany === 'All' && Object.entries(companyStats).length > 0 && (
+      {/* Show company stats only if no specific companies are selected */}
+      {selectedCompanies.length === 0 && Object.entries(companyStats).length > 0 && (
         <StatsContainer>
           {Object.entries(companyStats)
             .sort((a, b) => b[1] - a[1]) // Sort by count descending
@@ -388,7 +352,7 @@ const Filters = ({
                 radius="sm"
                 variant="light"
                 color="indigo"
-                leftSection={companyIcons[company] || <BadgeIconWrapper><HandshakeIcon fontSize="small" style={{ color: '#00796B' }} /></BadgeIconWrapper>}
+                leftSection={companyIcons[company] || <Building size={14} />}
                 styles={{
                   root: {
                     paddingLeft: '10px',
@@ -405,8 +369,7 @@ const Filters = ({
                   }
                 }}
                 onClick={() => {
-                  onCompanyChange({ target: { value: company } });
-                  setSelectedCompanies([company]);
+                  onCompanyChange([company]);
                 }}
               >
                 {company}: {count}
