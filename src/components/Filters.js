@@ -18,7 +18,6 @@ import {
   FileDescription, 
   Shield, 
   ChartBar,
-  DeviceDesktop,
   BrandGoogle,
   BrandFacebook,
   BrandApple,
@@ -30,7 +29,9 @@ import {
   Settings,
   Users,
   Photo,
-  Tool
+  Tool,
+  Robot,
+  HeartHandshake
 } from 'tabler-icons-react';
 import styled from 'styled-components';
 
@@ -56,40 +57,6 @@ const EventCount = styled(Text)`
   opacity: 0.7;
   font-size: 0.9rem;
 `;
-
-// Map categories to emoji
-const categoryEmojis = {
-  "Model Releases": "💻",
-  "Product Launches": "🚀",
-  "Research Breakthroughs": "🧪",
-  "Corporate Partnerships": "🤝",
-  "Policy Regulation": "📜",
-  "AI Ethics Safety": "🛡️",
-  "Industry Analysis": "📊",
-  "Robotics Automation": "🦾"
-};
-
-// Map companies to emoji
-const companyEmojis = {
-  "OpenAI": "🧠",
-  "Google": "🔍",
-  "Anthropic": "🧠",
-  "xAI": "🚀",
-  "Mistral AI": "🧠",
-  "ByteDance": "👥",
-  "Meta": "👤",
-  "Amazon": "📦",
-  "DeepMind": "🧠",
-  "Figure": "🤖",
-  "LangChain": "⛓️",
-  "LessWrong": "📝",
-  "Sourcegraph": "🔍",
-  "Descript": "🎙️",
-  "Microsoft": "🪟",
-  "Apple": "🍎",
-  "Stability AI": "🖼️",
-  "Various": "🔄"
-};
 
 // Available months array for dropdown
 const availableMonths = [
@@ -136,10 +103,10 @@ const Filters = ({
 
   // Category icons mapping with intuitive colors based on color theory
   const categoryIcons = {
-    "Model Releases": <DeviceDesktop size={14} style={{color: '#0078D7'}} />, // Tech blue - represents technology and innovation
+    "Model Releases": <Robot size={18} style={{color: '#0078D7'}} />, // Tech blue - represents technology and innovation
     "Product Launches": <Rocket size={14} style={{color: '#E53935'}} />, // Vibrant red - represents energy and excitement
     "Research Breakthroughs": <Flask size={14} style={{color: '#8E24AA'}} />, // Purple - represents creativity and discovery
-    "Corporate Partnerships": <Building size={14} style={{color: '#00796B'}} />, // Teal - represents cooperation and stability
+    "Corporate Partnerships": <HeartHandshake size={16} style={{color: '#00796B'}} />, // Teal - represents cooperation and stability
     "Policy Regulation": <FileDescription size={14} style={{color: '#263238'}} />, // Dark slate - represents authority and structure
     "AI Ethics Safety": <Shield size={14} style={{color: '#FFC107'}} />, // Amber/Yellow - represents caution and safety
     "Industry Analysis": <ChartBar size={14} style={{color: '#00ACC1'}} />, // Cyan - represents data and clarity
@@ -170,7 +137,7 @@ const Filters = ({
 
   // Category color mapping for badges
   const categoryColors = {
-    "Model Releases": "blue",
+    "Model Releases": "indigo",
     "Product Launches": "red",
     "Research Breakthroughs": "grape",
     "Corporate Partnerships": "teal",
@@ -223,7 +190,7 @@ const Filters = ({
     .filter(cat => cat !== 'All')
     .map(cat => ({ 
       value: cat, 
-      label: `${categoryEmojis[cat] || ''} ${cat}`,
+      label: cat,
       leftSection: categoryIcons[cat]
     }));
 
@@ -231,7 +198,7 @@ const Filters = ({
     .filter(comp => comp !== 'All')
     .map(comp => ({ 
       value: comp, 
-      label: `${companyEmojis[comp] || ''} ${comp}`,
+      label: comp,
       leftSection: companyIcons[comp] || <Building size={14} />
     }));
 
@@ -296,7 +263,7 @@ const Filters = ({
             renderOption={({ option, checked }) => (
               <Group gap="xs">
                 {option.leftSection}
-                <div>{option.label.split(' ').slice(1).join(' ')}</div>
+                <div>{option.label}</div>
               </Group>
             )}
           />
@@ -317,7 +284,7 @@ const Filters = ({
             renderOption={({ option, checked }) => (
               <Group gap="xs">
                 {option.leftSection}
-                <div>{option.label.split(' ').slice(1).join(' ')}</div>
+                <div>{option.label}</div>
               </Group>
             )}
           />
@@ -333,15 +300,17 @@ const Filters = ({
           {Object.entries(categoryStats).map(([category, count]) => (
             <Badge 
               key={category} 
-              size="md" 
-              radius="sm" 
+              size={category === "Model Releases" ? "lg" : "md"}
+              radius={category === "Model Releases" ? "md" : "sm"}
               variant="light"
+              gradient={undefined}
               color={categoryColors[category] || "gray"}
               leftSection={categoryIcons[category] || <FileDescription size={14} style={{color: '#263238'}} />}
               styles={{
                 root: {
                   paddingLeft: '8px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  fontWeight: category === "Model Releases" ? 500 : 'normal'
                 },
                 section: {
                   marginRight: '4px'
