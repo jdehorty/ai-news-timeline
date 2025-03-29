@@ -126,7 +126,7 @@ export const februaryData = [
     description: "Elon Musk proposed a $97 billion acquisition offer for OpenAI—sparking intense industry debate.",
     category: "Corporate Partnerships",
     company: "xAI",
-    icon: "business",
+    icon: "partnership",
     month: "February 2025"
   },
   {
