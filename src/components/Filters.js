@@ -186,7 +186,7 @@ const Filters = ({
 
   // Handler to reset all filters to default values
   const handleClearFilters = () => {
-    onMonthChange({ target: { value: 'All' } });
+    // Don't reset month filter, keep it as is
     onCategoryChange([]);
     onCompanyChange([]);
   };
