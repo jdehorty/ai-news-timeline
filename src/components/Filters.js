@@ -39,6 +39,7 @@ import SecurityIcon from '@mui/icons-material/Security';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import styled from 'styled-components';
+import { availableMonths } from '../data'; // Import the central list
 
 // Styled components
 const FiltersContainer = styled(Paper)`
@@ -62,13 +63,6 @@ const EventCount = styled(Text)`
   opacity: 0.7;
   font-size: 0.9rem;
 `;
-
-// Available months array for dropdown
-const availableMonths = [
-  "All",
-  "February 2025",
-  "March 2025"
-];
 
 // Custom wrapper for Material UI icon to match tabler-icons style
 const MuiIconWrapper = ({ children, size = 16, style = {} }) => (

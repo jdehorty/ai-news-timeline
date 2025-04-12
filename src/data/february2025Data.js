@@ -34,7 +34,7 @@ export const februaryData = [
     description: "OpenAI revealed a specialized ChatGPT agent focused on conducting in-depth research.",
     category: "Product Launches",
     company: "OpenAI",
-    icon: "research",
+    icon: "product",
     month: "February 2025"
   },
   {
@@ -52,14 +52,14 @@ export const februaryData = [
     description: "A detailed evaluation of OpenAI's new Deep Research agent assesses its technical capabilities and potential economic impact.",
     category: "Industry Analysis",
     company: "OpenAI",
-    icon: "research",
+    icon: "industry",
     month: "February 2025"
   },
   {
     date: "February 5, 2025",
     title: "ByteDance Introduces OmniHuman-1",
     description: "ByteDance introduced OmniHuman-1, an AI model that creates lifelike video animations from still images.",
-    category: "Product Launches",
+    category: "Model Releases",
     company: "ByteDance",
     icon: "model",
     month: "February 2025"
@@ -88,7 +88,7 @@ export const februaryData = [
     description: "Mistral AI released its 'Le Chat' assistant designed for rapid, accurate responses.",
     category: "Product Launches",
     company: "Mistral AI",
-    icon: "assistant",
+    icon: "product",
     month: "February 2025"
   },
 
@@ -99,7 +99,7 @@ export const februaryData = [
     description: "An analysis comparing Google's Gemini 2.0 Pro with rival AI models.",
     category: "Industry Analysis",
     company: "Google",
-    icon: "analysis",
+    icon: "industry",
     month: "February 2025"
   },
   {
@@ -135,7 +135,7 @@ export const februaryData = [
     description: "The Paris AI summit spotlighted global tensions as tech leaders and policymakers debated AI ethics, security, and governance.",
     category: "Policy Regulation",
     company: "Various",
-    icon: "ethics",
+    icon: "policy",
     month: "February 2025"
   },
   {
@@ -144,7 +144,7 @@ export const februaryData = [
     description: "Google provided information about new Gemini features and privacy updates.",
     category: "AI Ethics Safety",
     company: "Google",
-    icon: "privacy",
+    icon: "ethics",
     month: "February 2025"
   },
   {
@@ -153,7 +153,7 @@ export const februaryData = [
     description: "OpenAI outlined its roadmap for GPT-5, contemplating enhanced multimodal and reasoning capabilities.",
     category: "Model Releases",
     company: "OpenAI",
-    icon: "roadmap",
+    icon: "model",
     month: "February 2025"
   },
   {
@@ -173,7 +173,7 @@ export const februaryData = [
     description: "An analytical review examined how upcoming AI technologies could disrupt labor markets by automating jobs and transforming industry practices.",
     category: "Industry Analysis",
     company: "Various",
-    icon: "analysis",
+    icon: "industry",
     month: "February 2025"
   },
   {
@@ -254,7 +254,7 @@ export const februaryData = [
     description: "Alibaba presented a cutting-edge AI video generation suite that can produce realistic content rapidly.",
     category: "Product Launches",
     company: "Alibaba",
-    icon: "video",
+    icon: "product",
     month: "February 2025"
   },
   {
@@ -263,7 +263,7 @@ export const februaryData = [
     description: "Amazon introduced its generative AI-enhanced Alexa, which provides deeper, more intuitive home interactions.",
     category: "Product Launches",
     company: "Amazon",
-    icon: "assistant",
+    icon: "product",
     month: "February 2025"
   },
   {
@@ -272,7 +272,7 @@ export const februaryData = [
     description: "A reflective review analyzes where AI is advancing rapidly and where adoption lags.",
     category: "Industry Analysis",
     company: "Various",
-    icon: "analysis",
+    icon: "industry",
     month: "February 2025"
   },
   {
@@ -290,7 +290,7 @@ export const februaryData = [
     description: "Alongside the GPT-4.5 release, an analysis of AI compute consumption trends was published.",
     category: "Industry Analysis",
     company: "Various",
-    icon: "analysis",
+    icon: "industry",
     month: "February 2025"
   }
 ]; 

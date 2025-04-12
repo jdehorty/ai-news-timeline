@@ -202,9 +202,9 @@ export const marchData = [
     date: "March 13, 2025",
     title: "Anthropic CEO Predicts 90% of Code Will Be Written by AI in 6 Months",
     description: "During a keynote, Anthropic's CEO forecasted that AI will soon write 90% of code, emphasizing the transformative impact of AI on software development and the rise of Vibe coding.",
-    category: "Corporate Partnerships",
+    category: "Industry Analysis",
     company: "Anthropic",
-    icon: "business",
+    icon: "industry",
     month: "March 2025"
   },
   {
@@ -310,7 +310,7 @@ export const marchData = [
     date: "March 24, 2025",
     title: "OpenAI Upgrades Voice Model for More Natural Conversations",
     description: "OpenAI announced improvements to its AI voice assistant, making interactions more seamless with better conversational timing and context handling.",
-    category: "Product Launches",
+    category: "Model Releases",
     company: "OpenAI",
     icon: "model",
     month: "March 2025"
@@ -358,6 +358,60 @@ export const marchData = [
     category: "Product Launches",
     company: "OpenAI",
     icon: "product",
+    month: "March 2025"
+  },
+  {
+    date: "March 26, 2025",
+    title: "Ideogram Launches Version 3.0 with Enhanced Realism and Text Accuracy",
+    description: "Ideogram released version 3.0 of its AI image generator, claiming superior realism, text precision, and style customization compared to leading competitors.",
+    category: "Product Launches",
+    company: "Ideogram",
+    icon: "product",
+    month: "March 2025"
+  },
+  {
+    date: "March 26, 2025",
+    title: "Apple Reportedly Orders $1B in NVIDIA AI Servers for GenAI Infrastructure",
+    description: "Reports emerged that Apple placed a $1 billion order for advanced NVIDIA AI servers (GB300 NVL72 systems), signaling a major investment in building its own generative AI infrastructure amid previous Siri delays.",
+    category: "Corporate Partnerships",
+    company: "Apple",
+    icon: "partnership",
+    month: "March 2025"
+  },
+  {
+    date: "March 27, 2025",
+    title: "Alibaba Releases Qwen2.5-Omni-7B Multimodal AI Model",
+    description: "Alibaba Cloud introduced Qwen2.5-Omni-7B, a multimodal AI model capable of processing text, image, audio, and video, designed for efficiency on edge devices and claiming benchmark superiority over Google Gemini.",
+    category: "Model Releases",
+    company: "Alibaba",
+    icon: "model",
+    month: "March 2025"
+  },
+  {
+    date: "March 27, 2025",
+    title: "UNIDIR Hosts Inaugural Global Conference on AI, Security and Ethics",
+    description: "The UN Institute for Disarmament Research (UNIDIR) held its first Global Conference on AI, Security and Ethics in Geneva, convening diplomats, military, industry, and researchers to address AI governance in defense.",
+    category: "Policy Regulation",
+    company: "Various",
+    icon: "policy",
+    month: "March 2025"
+  },
+  {
+    date: "March 31, 2025",
+    title: "OpenAI Closes Record $40B Funding Round Led by SoftBank at $300B Valuation",
+    description: "OpenAI announced the closure of a historic $40 billion funding round led by SoftBank, valuing the company at $300 billion. A significant portion ($18B) is earmarked for the Stargate AI infrastructure project.",
+    category: "Corporate Partnerships",
+    company: "OpenAI",
+    icon: "partnership",
+    month: "March 2025"
+  },
+  {
+    date: "March 31, 2025",
+    title: "Google Gemini Becomes First GenAI Assistant Suite with FedRAMP High Authorization",
+    description: "Google announced that its Gemini in Workspace apps and the Gemini app achieved FedRAMP High authorization, becoming the first generative AI productivity suite cleared for use with sensitive US government data.",
+    category: "Policy Regulation",
+    company: "Google",
+    icon: "policy",
     month: "March 2025"
   }
 ];

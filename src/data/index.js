@@ -1,6 +1,7 @@
 // Import data from individual month files
 import { februaryData } from './february2025Data';
 import { marchData } from './march2025Data';
+import { aprilData } from './april2025Data';
 // Add more imports as you create data for more months
 
 // Categories for filtering
@@ -44,6 +45,7 @@ export const availableMonths = [
   "All",
   "February 2025",
   "March 2025",
+  "April 2025",
   // Add more months as you create data for them
 ];
 
@@ -51,6 +53,7 @@ export const availableMonths = [
 export const timelineDataByMonth = {
   "February 2025": februaryData,
   "March 2025": marchData,
+  "April 2025": aprilData,
   // Add more months as you create data for them
 };
 
@@ -58,5 +61,6 @@ export const timelineDataByMonth = {
 export const timelineData = [
   ...februaryData,
   ...marchData,
+  ...aprilData,
   // Add more months as you create data for them
 ]; 
