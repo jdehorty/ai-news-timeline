@@ -14,24 +14,19 @@ Effectively navigating the complex AI ecosystem described requires a clear profi
 
 ### Google's Gemini 2.5 Series: Multimodal Strength and Advanced Reasoning
 
-Google's Gemini 2.5 models significantly advance multimodal capabilities—seamlessly integrating text, images, audio, video, and code. The flagship model, Gemini 2.5 Pro, excels in complex reasoning with an extensive context window of 1 million tokens, with future plans to extend this to 2 million tokens. This makes it well-suited for detailed, multi-dimensional analyses without external retrieval dependencies.
+Google's Gemini 2.5 models significantly advance multimodal capabilities—seamlessly integrating text, images, audio, video, and code. The flagship model, Gemini 2.5 Pro, excels in complex reasoning with an extensive context window of 1 million tokens, with future plans to extend this to 2 million tokens. This makes it well-suited for detailed, multi-dimensional analyses without external retrieval dependencies. Pricing for the preview version is set at $1.25 per million input tokens and $10.00 per million output tokens for standard context lengths.
 
-The Gemini 2.5 Flash model emphasizes efficiency and speed through its Mixture-of-Experts (MoE) architecture and dynamic hybrid reasoning, enabling developers to balance performance, cost, and latency. Together, these Gemini models strategically position Google to address diverse enterprise AI needs, from intensive analysis to real-time responsiveness.
+The Gemini 2.5 Flash model emphasizes efficiency and speed through its Mixture-of-Experts (MoE) architecture and dynamic hybrid reasoning, enabling developers to balance performance, cost, and latency. Its preview pricing is $0.15 per million input tokens (text/image/video) and $0.60 per million output tokens (non-thinking), making it a cost-effective option for high-throughput tasks. Together, these Gemini models strategically position Google to address diverse enterprise AI needs, from intensive analysis to real-time responsiveness.
 
 ### OpenAI's GPT Series: Targeted Specialization and Efficiency
 
 OpenAI's GPT-4.1 series, introduced in April 2025, emphasizes specialized, efficient models tailored specifically for developers and enterprise use. Rather than relying solely on large, general-purpose models, the GPT-4.1 lineup offers targeted performance, affordability, and speed optimized for distinct scenarios:
 
 - **GPT-4.1 (Flagship)**: Excels in advanced coding, precise instruction-following, and detailed long-context reasoning, achieving 54.6% accuracy on software engineering benchmarks—significantly outperforming GPT-4o's 33.2%. Its expanded context window of up to 1 million tokens enables practical handling of large documents and extensive datasets without segmenting input.
-  - **Pricing**: $2 per million input tokens, $8 per million output tokens.
-
 - **GPT-4.1 Mini**: Delivers performance comparable to GPT-4o but at approximately 85% lower cost and reduced latency, providing a robust yet affordable default choice for most enterprise applications.
-  - **Pricing**: $0.40 per million input tokens, $1.60 per million output tokens.
-
 - **GPT-4.1 Nano**: Optimized for high-frequency, simpler tasks such as classification, autocomplete, and routine data extraction, ensuring maximum speed and cost-efficiency.
-  - **Pricing**: $0.10 per million input tokens, $0.40 per million output tokens.
 
-At Bentley, these expanded context windows and cost-effective models already enable practical replacement or substantial reduction of Retrieval-Augmented Generation (RAG) methods for small- to medium-sized iModels, whose metadata comfortably fits within the 1-million-token context. This significantly reduces complexity and eliminates subsequent costly pipeline steps in ECSQL generation previously required to re-rank initial retrieval results due to their lower quality.
+While the expanded context windows of models like GPT-4.1 Flagship offer the potential to simplify workflows previously reliant on complex Retrieval-Augmented Generation (RAG) pipelines—potentially reducing steps in certain specific cases by allowing more raw data into the prompt—practical application reveals significant nuance. Stuffing multi-million token contexts doesn't automatically equate to better or cheaper results. Models can still struggle with "lost in the middle" phenomena, where information embedded deep within vast contexts is ignored or underutilized. Furthermore, processing such large inputs incurs substantial computational cost (as reflected in the pricing table) and can risk distracting the model with irrelevant details. Consequently, RAG techniques remain crucial for many enterprise tasks, particularly those demanding high precision, grounding in specific verifiable facts, and cost-effective retrieval from large, dynamic knowledge bases. The choice between leveraging massive context versus employing RAG is increasingly becoming a strategic decision based on the specific task's requirements for accuracy, cost, and the nature of the underlying data, rather than a simple replacement scenario.
 
 ### GPT-4.5: A Strategic Shift Toward Specialized Efficiency
 
@@ -46,6 +41,20 @@ Complementing GPT models, OpenAI's specialized o-series target structured reason
 Meta's ambitious Llama 4 series introduced multimodal capabilities, extensive context windows, and efficient Mixture-of-Experts architectures. However, its rollout faced significant controversy regarding benchmarking practices, transparency, and practical performance gaps. Additionally, Meta's licensing approach ("open-weight") drew criticism as restrictive "open-washing."
 
 These challenges emphasize a critical lesson: ambitious technical advancements must align transparently and credibly with real-world performance and openness.
+
+### Comparative Pricing and Capabilities (April 2025 Models)
+
+| Model Provider | Model Name          | Key Feature/Use Case            | Context Window Size | Input Price ($/M tokens) | Output Price ($/M tokens) |
+| :------------- | :------------------ | :------------------------------ | :------------------ | :----------------------- | :------------------------ |
+| Google         | Gemini 2.5 Pro      | Advanced Multimodal/Reasoning   | 1M (Plan: 2M)       | $1.25                    | $10.00                    |
+| Google         | Gemini 2.5 Flash    | Efficient/Speed (MoE)           | 1M                  | $0.15                    | $0.60                     |
+| OpenAI         | GPT-4.1 (Flagship)  | Adv. Coding/Reasoning           | 1M                  | $2.00                    | $8.00                     |
+| OpenAI         | GPT-4.1 Mini        | Balanced Cost/Perf.             | 128k                | $0.40                    | $1.60                     |
+| OpenAI         | GPT-4.1 Nano        | High Freq./Simple Tasks         | 128k                | $0.10                    | $0.40                     |
+| OpenAI         | o3                  | Multi-step Reasoning/Tools      | 128k                | $10.00                   | $40.00                    |
+| OpenAI         | o4-mini             | Structured Tasks/Lower Latency  | 200k                | $1.10                    | $4.40                     |
+| OpenAI         | GPT-4o (Baseline)   | Flagship Multimodal (Prev. Gen) | 128k                | $2.50                    | $10.00                    |
+| Meta           | Llama 4 Series      | Multimodal (Open-Weight)        | Varies (Extensive)  | N/A (Self-hosted)        | N/A (Self-hosted)         |
 
 ## Architecting Robust Environments – Intelligent Infrastructure and Platforms
 
