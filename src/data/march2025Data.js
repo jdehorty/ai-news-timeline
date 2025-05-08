@@ -413,6 +413,16 @@ export const marchData = [
     company: "Google",
     icon: "policy",
     month: "March 2025"
+  },
+  {
+    date: "March 31, 2025",
+    title: "Amazon Releases Nova Act AI Agent SDK (Research Preview)",
+    description:
+      "Amazon introduced Nova Act, a foundation model and SDK that lets developers build web-action agents able to control browsers and desktop apps.",
+    category: "Product Launches",
+    company: "Amazon",
+    icon: "product",
+    month: "March 2025"
   }
 ];
 
