@@ -12,34 +12,12 @@ export const aprilData = [
     month: "April 2025"
   },
   {
-    date: "April 1, 2025",
-    title: "Meta's AI Research Chief Joelle Pineau Steps Down",
-    description:
-      "Joelle Pineau, Meta's VP of AI research and FAIR lab head, announced her 30 May departure amid Meta's ongoing AI-infrastructure overhaul.",
-    category: "Industry Analysis",
-    company: "Meta",
-    icon: "industry",
-    month: "April 2025"
-  },
-
-  // ───────── 02 Apr 2025  ─────────
-  {
-    date: "April 2, 2025",
-    title: "Anthropic Introduces Claude for Education with \"Learning Mode\"",
-    description:
-      "Anthropic launched 'Claude for Education', featuring a guided Learning Mode plus Canvas & Internet2 integrations and FERPA-aligned privacy controls.",
-    category: "Product Launches",
-    company: "Anthropic",
-    icon: "product",
-    month: "April 2025"
-  },
-  {
     date: "April 2, 2025",
     title: "DeepMind Publishes 145-Page Strategic Plan for Safe AGI Development",
     description:
       "Google DeepMind outlined a staged path to 'exceptional AGI' by 2030, warning of societal harms without robust interpretability and oversight.",
-    category: "Research Breakthroughs",
-    company: "Google DeepMind",
+    category: "Industry Analysis",
+    company: "Google",
     icon: "research",
     month: "April 2025"
   },
@@ -375,16 +353,6 @@ export const aprilData = [
     category: "Model Releases",
     company: "DeepSeek AI",
     icon: "model",
-    month: "April 2025"
-  },
-  {
-    date: "April 30, 2025",
-    title: "Enterprise-AI Startup Gruve.ai Raises $20 M Series A",
-    description:
-      "Gruve.ai—building autonomous agents for IT consulting—closed a Mayfield-led round to scale its enterprise platform.",
-    category: "Corporate Partnerships",
-    company: "Gruve.ai",
-    icon: "partnership",
     month: "April 2025"
   }
 ];
