@@ -35,3 +35,4 @@ build-test/
 *.bak
 /.venv
 *.json
+.claude/

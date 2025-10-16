@@ -3,17 +3,17 @@ export const februaryData = [
   // Week 1 (Feb 1-7)
   {
     date: "February 1, 2025",
-    title: "US Copyright Office: AI Art Guidelines",
-    description: "New guidelines clarify that purely AI-generated artwork lacks full copyright protection without human contribution.",
+    title: "US Copyright Office Issues AI Art Guidelines",
+    description: "New guidelines clarify that purely AI-generated artwork lacks copyright protection without human contribution.",
     category: "Policy Regulation",
-    company: "Various",
+    company: "US Copyright Office",
     icon: "policy",
     month: "February 2025"
   },
   {
     date: "February 1, 2025",
-    title: "OpenAI Launches O3-Mini Model",
-    description: "OpenAI launched the o3-mini model, offering better logical reasoning capabilities as a free feature for ChatGPT users.",
+    title: "OpenAI Launches o3-mini Model",
+    description: "OpenAI launched o3-mini model, offering improved logical reasoning capabilities as free ChatGPT feature.",
     category: "Model Releases",
     company: "OpenAI",
     icon: "model",
@@ -21,17 +21,17 @@ export const februaryData = [
   },
   {
     date: "February 2, 2025",
-    title: "Humanity's Last Exam Benchmark Released",
-    description: "New benchmark measuring AI's proximity to human expert-level knowledge in domains like mathematics, medicine, and law.",
+    title: "Researchers Release Humanity's Last Exam Benchmark",
+    description: "New benchmark measures AI's proximity to human expert knowledge in mathematics, medicine, and law.",
     category: "Research Breakthroughs",
-    company: "Various",
+    company: "Research Community",
     icon: "research",
     month: "February 2025"
   },
   {
     date: "February 3, 2025",
     title: "OpenAI Unveils Deep Research Agent",
-    description: "OpenAI revealed a specialized ChatGPT agent focused on conducting in-depth research.",
+    description: "OpenAI revealed specialized ChatGPT agent focused on conducting comprehensive research tasks.",
     category: "Product Launches",
     company: "OpenAI",
     icon: "product",
@@ -39,8 +39,8 @@ export const februaryData = [
   },
   {
     date: "February 4, 2025",
-    title: "SoftBank-OpenAI Japan Partnership",
-    description: "SoftBank and OpenAI announced a strategic partnership focused on the Japanese market.",
+    title: "SoftBank and OpenAI Form Strategic Japan Partnership",
+    description: "SoftBank and OpenAI announced strategic partnership targeting Japanese market expansion.",
     category: "Corporate Partnerships",
     company: "OpenAI",
     icon: "partnership",
@@ -49,7 +49,7 @@ export const februaryData = [
   {
     date: "February 4, 2025",
     title: "Deep Research Agent Evaluation",
-    description: "A detailed evaluation of OpenAI's new Deep Research agent assesses its technical capabilities and potential economic impact.",
+    description: "Detailed evaluation assesses OpenAI's Deep Research agent technical capabilities and economic impact potential.",
     category: "Industry Analysis",
     company: "OpenAI",
     icon: "industry",
@@ -58,7 +58,7 @@ export const februaryData = [
   {
     date: "February 5, 2025",
     title: "ByteDance Introduces OmniHuman-1",
-    description: "ByteDance introduced OmniHuman-1, an AI model that creates lifelike video animations from still images.",
+    description: "ByteDance introduced OmniHuman-1, an AI model creating lifelike video animations from still images.",
     category: "Model Releases",
     company: "ByteDance",
     icon: "model",
@@ -67,7 +67,7 @@ export const februaryData = [
   {
     date: "February 6, 2025",
     title: "Google Releases Gemini 2.0 Pro",
-    description: "Google launched Gemini 2.0 Pro—a major upgrade enhancing reasoning and processing for enterprise tasks.",
+    description: "Google launched Gemini 2.0 Pro, a major upgrade enhancing reasoning and processing for enterprise tasks.",
     category: "Model Releases",
     company: "Google",
     icon: "model",
@@ -75,8 +75,8 @@ export const februaryData = [
   },
   {
     date: "February 7, 2025",
-    title: "Lyft-Anthropic Customer Service Partnership",
-    description: "Lyft and Anthropic announced a partnership to develop customer service bots.",
+    title: "Lyft and Anthropic Form Customer Service Partnership",
+    description: "Lyft and Anthropic announced partnership to develop AI-powered customer service bots.",
     category: "Corporate Partnerships",
     company: "Anthropic",
     icon: "partnership",
@@ -85,7 +85,7 @@ export const februaryData = [
   {
     date: "February 7, 2025",
     title: "Mistral AI Launches Le Chat Assistant",
-    description: "Mistral AI released its 'Le Chat' assistant designed for rapid, accurate responses.",
+    description: "Mistral AI released Le Chat assistant designed for rapid, accurate responses.",
     category: "Product Launches",
     company: "Mistral AI",
     icon: "product",
@@ -96,7 +96,7 @@ export const februaryData = [
   {
     date: "February 8, 2025",
     title: "Gemini 2.0 Pro Competitive Analysis",
-    description: "An analysis comparing Google's Gemini 2.0 Pro with rival AI models.",
+    description: "Analysis comparing Google's Gemini 2.0 Pro with rival AI models.",
     category: "Industry Analysis",
     company: "Google",
     icon: "industry",
@@ -105,9 +105,9 @@ export const februaryData = [
   {
     date: "February 9, 2025",
     title: "Open Source AI as Soft Power Strategy",
-    description: "A deep-dive discussion explored how open source AI can serve as a critical tool of soft power, enhancing national influence.",
+    description: "Deep-dive discussion explores how open source AI serves as critical soft power tool, enhancing national influence.",
     category: "Policy Regulation",
-    company: "Various",
+    company: "Research Community",
     icon: "policy",
     month: "February 2025"
   },
