@@ -191,16 +191,6 @@ export const septemberData = [
     month: "September 2025",
   },
   {
-    date: "September 19, 2025",
-    title: "Stanford Research Demonstrates AI Can Design Novel Pandemic
-    description:
-      "The Indian government deployed 38,000 GPUs under its IndiaAI Mission to support domestic model development, offering subsidized compute to boost the nation's AI self-reliance. The initiative represents India's most significant investment in AI infrastructure, designed to reduce dependency on foreign cloud providers and enable Indian researchers and startups to train large-scale AI models. The subsidized GPU access is made available to academic institutions, research organizations, and approved startups through a competitive application process. The mission aligns with India's broader strategy to become a global AI hub and develop indigenous AI capabilities across sectors including healthcare, agriculture, and governance.",
-    category: "Policy Regulation",
-    company: "Indian Government",
-    icon: "policy",
-    month: "September 2025",
-  },
-  {
     date: "September 22, 2025",
     title: "NVIDIA and OpenAI Announce Historic $100B Partnership for Superintelligence Infrastructure",
     description:
