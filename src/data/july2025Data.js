@@ -423,7 +423,7 @@ export const julyData = [
     date: "July 31, 2025",
     title: "Meta Unveils 'Personal Superintelligence' Vision for AI Future",
     description:
-      "Mark Zuckerberg published Meta's vision for personalized AI superintelligence integrated into devices like smart glasses. The manifesto explains Meta's talent acquisition strategy and $72B infrastructure investment, positioning the company to deliver distributed, personalized AI assistants vs. centralized models."
+      "Mark Zuckerberg published Meta's vision for personalized AI superintelligence integrated into devices like smart glasses. The manifesto explains Meta's talent acquisition strategy and $72B infrastructure investment, positioning the company to deliver distributed, personalized AI assistants vs. centralized models.",
     category: "Industry Analysis",
     company: "Meta",
     icon: "industry",
