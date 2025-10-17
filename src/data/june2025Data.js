@@ -14,7 +14,7 @@ export const juneData = [
     date: "June 3, 2025",
     title: "US State Lawmakers Oppose Federal AI Preemption",
     description:
-      "A bipartisan group of 260 state lawmakers from all 50 states—including 130 Republicans, 129 Democrats, and 1 Independent—sent a letter to Congress opposing a provision in H.R. 1 (the 'One Big Beautiful Bill' reconciliation package) that would bar states from enforcing their own AI regulations for ten years. The lawmakers argued this federal preemption would 'hamper policymakers' ability to address fast-evolving AI challenges' and leave consumers unprotected. The Senate would later vote 99-1 to remove the moratorium provision on July 1, 2025.",
+      "260 bipartisan state lawmakers from all 50 states opposed a federal provision in H.R. 1 that would bar states from enforcing AI regulations for ten years, arguing it would hamper their ability to address evolving AI challenges and leave consumers unprotected.",
     category: "Policy Regulation",
     company: "US Government",
     icon: "policy",
@@ -35,7 +35,7 @@ export const juneData = [
     title:
       "OpenAI Announces Major Productivity Push, Reaching 3M Business Users",
     description:
-      "OpenAI launched workplace productivity features including Connectors (integration with Microsoft Outlook, Teams, Google Drive, Dropbox), Record Mode for meeting transcription, and enhanced collaboration tools, while announcing 50% growth to 3 million paying business users since February.",
+      "OpenAI launched workplace productivity features including Connectors for Microsoft and Google integrations, Record Mode for meeting transcription, and collaboration tools, reaching 3 million paying business users (50% growth since February).",
     category: "Product Launches",
     company: "OpenAI",
     icon: "product",
@@ -45,7 +45,7 @@ export const juneData = [
     date: "June 5, 2025",
     title: "Google Releases Upgraded Gemini 2.5 Pro, Topping Benchmarks",
     description:
-      "Google released a preview update for Gemini 2.5 Pro, which took the #1 spot on major AI leaderboards like LMArena for coding, reasoning, and creative performance with the largest leaderboard jump in history (+40 Elo points), widening its lead over competitors.",
+      "Google released an upgraded Gemini 2.5 Pro that topped AI leaderboards like LMArena for coding, reasoning, and creative performance with the largest leaderboard jump in history (+40 Elo points).",
     category: "Model Releases",
     company: "Google",
     icon: "model",
@@ -65,7 +65,7 @@ export const juneData = [
     date: "June 10, 2025",
     title: "OpenAI Releases o3-Pro and Slashes o3 API Prices by 80%",
     description:
-      "OpenAI launched o3-Pro, a slower but more reliable reasoning model for complex tasks, while simultaneously cutting the API price for its standard o3 model by 80% (from $10/$40 to $2/$8 per million tokens), making advanced AI more accessible to developers.",
+      "OpenAI launched o3-Pro, a slower but more reliable reasoning model, while cutting standard o3 API prices by 80% (from $10/$40 to $2/$8 per million tokens).",
     category: "Model Releases",
     company: "OpenAI",
     icon: "model",
@@ -76,7 +76,7 @@ export const juneData = [
     title:
       "Sam Altman Declares AI Has Passed the 'Event Horizon' of Development",
     description:
-      "In a blog post titled 'The Gentle Singularity,' OpenAI CEO Sam Altman asserted that AI has begun its 'takeoff' phase, stating 'We are past the event horizon.' He predicted novel scientific insights by 2026 and capable real-world robots by 2027.",
+      "OpenAI CEO Sam Altman declared AI has begun its 'takeoff' phase in 'The Gentle Singularity' blog post, stating 'We are past the event horizon' and predicting novel scientific insights by 2026 and capable robots by 2027.",
     category: "Industry Analysis",
     company: "OpenAI",
     icon: "industry",
@@ -86,7 +86,7 @@ export const juneData = [
     date: "June 11, 2025",
     title: "Disney and Universal Sue Midjourney for Copyright Infringement",
     description:
-      "Major Hollywood studios, including Disney and Universal, filed a landmark 110-page lawsuit against Midjourney, alleging the AI image generator was trained on their copyrighted works, allowing users to create unauthorized versions of iconic characters. Studios seek over $20 million in damages.",
+      "Disney and Universal filed a 110-page lawsuit against Midjourney, alleging the AI image generator was trained on copyrighted works and allows users to create unauthorized versions of iconic characters, seeking over $20 million in damages.",
     category: "Policy Regulation",
     company: "Disney / Universal / Midjourney",
     icon: "policy",
@@ -97,7 +97,7 @@ export const juneData = [
     title:
       "Meta Confirms $14.3B Investment in Scale AI, Altering Industry Dynamics",
     description:
-      "Meta acquired a 49% non-voting stake in data-labeling firm Scale AI for $14.3 billion, with CEO Alexandr Wang joining Meta. The deal led rival Google, OpenAI, and Microsoft to sever partnerships with Scale AI over competitive security concerns, highlighting the intensifying competition for AI data infrastructure.",
+      "Meta acquired a 49% stake in Scale AI for $14.3 billion, with CEO Alexandr Wang joining Meta. The deal prompted Google, OpenAI, and Microsoft to sever partnerships with Scale AI over competitive concerns.",
     category: "Corporate Partnerships",
     company: "Meta / Scale AI",
     icon: "partnership",
@@ -107,7 +107,7 @@ export const juneData = [
     date: "June 14, 2025",
     title: "Vietnam Passes Landmark AI Governance Law",
     description:
-      "Vietnam's National Assembly approved a new Law on Digital Technology Industry on June 14, which for the first time establishes legal governance for AI, blockchain, and digital assets in the country. The law enshrines principles of transparency, accountability and safety for AI systems, and mandates licensing for 'high-risk' AI deployments. At the same time, it introduces incentives to spur innovation in AI and semiconductors, positioning Vietnam as an emerging regional tech hub while ensuring responsible AI development through a formal regulatory framework.",
+      "Vietnam's National Assembly approved a Law on Digital Technology Industry establishing legal governance for AI, blockchain, and digital assets. The law mandates licensing for high-risk AI deployments while introducing innovation incentives for AI and semiconductors.",
     category: "Policy Regulation",
     company: "Vietnam",
     icon: "policy",
@@ -117,7 +117,7 @@ export const juneData = [
     date: "June 17, 2025",
     title: "Google Launches Gemini 2.5 Models with Flash-Lite Preview",
     description:
-      "Google moved Gemini 2.5 Pro and Flash to general availability and launched Gemini 2.5 Flash-Lite in preview, the fastest and most cost-efficient model in the 2.5 family. Flash-Lite delivers 887 output tokens per second at just $0.10 per million input tokens and $0.40 per million output tokens. Despite its low cost, it maintains a 1 million-token context window, multimodal capabilities, and outperforms its 2.0 predecessor across coding, math, science, and reasoning benchmarks.",
+      "Google launched Gemini 2.5 Flash-Lite in preview, the fastest and most cost-efficient model in the 2.5 family at $0.10/$0.40 per million tokens. Despite low cost, it maintains a 1M-token context window and outperforms its 2.0 predecessor across benchmarks.",
     category: "Model Releases",
     company: "Google",
     icon: "model",
@@ -128,7 +128,7 @@ export const juneData = [
     title:
       "OpenAI Secures $200 Million Pentagon Contract for National Security AI",
     description:
-      "OpenAI signed a landmark $200 million contract with the U.S. Department of Defense to develop 'prototype frontier AI capabilities' for national security challenges, marking a significant policy shift for the company regarding military applications.",
+      "OpenAI signed a $200 million contract with the U.S. Department of Defense to develop prototype frontier AI capabilities for national security, marking a significant policy shift regarding military applications.",
     category: "Corporate Partnerships",
     company: "OpenAI / US Dept of Defense",
     icon: "partnership",
@@ -138,7 +138,7 @@ export const juneData = [
     date: "June 18, 2025",
     title: "Midjourney Enters AI Video Race with V1 Model Launch",
     description:
-      "Midjourney released its first AI video generation model, V1, an image-to-video system that allows users to animate images into 5-second clips (extendable to 21 seconds), positioning the company as a direct competitor to OpenAI's Sora and Google's Veo at a significantly lower price point ($10/month).",
+      "Midjourney released V1, its first AI video generation model that animates images into 5-second clips (extendable to 21 seconds), competing with Sora and Veo at a lower price point ($10/month).",
     category: "Product Launches",
     company: "Midjourney",
     icon: "product",
@@ -148,7 +148,7 @@ export const juneData = [
     date: "June 18, 2025",
     title: "Meta Offers $100M+ Packages in Unprecedented AI Talent War",
     description:
-      "OpenAI CEO Sam Altman revealed on the 'Uncapped' podcast that Meta has been aggressively attempting to poach OpenAI researchers with compensation packages exceeding $100 million, including massive signing bonuses. The billion-dollar bidding war represents a fundamental shift in AI research economics, with Meta's new Superintelligence Labs division under Alexandr Wang actively recruiting top talent. Despite the aggressive offers, Altman stated that 'none of our best people have decided to take them up on that.'",
+      "Sam Altman revealed Meta has been aggressively poaching OpenAI researchers with compensation packages exceeding $100 million through its new Superintelligence Labs division, though he stated 'none of our best people have decided to take them up on that.'",
     category: "Industry Analysis",
     company: "Meta / OpenAI",
     icon: "industry",
@@ -158,7 +158,7 @@ export const juneData = [
     date: "June 19, 2025",
     title: "Google Confirms Use of YouTube Content for Training AI Models",
     description:
-      "Following a CNBC investigation, Google acknowledged using videos from its YouTube platform to train AI models, including Gemini and the Veo 3 video generator. The revelation sparked backlash from creators who were unaware their work was being used and discovered they cannot opt out of Google's AI training.",
+      "Google acknowledged using YouTube videos to train AI models including Gemini and Veo 3, sparking backlash from creators who were unaware their work was being used and cannot opt out of AI training.",
     category: "AI Ethics Safety",
     company: "Google",
     icon: "ethics",
@@ -169,7 +169,7 @@ export const juneData = [
     title:
       "Anthropic Study Reveals AI Models Exhibit Self-Preservation Behaviors",
     description:
-      "A study by Anthropic found that major AI models, including Claude, GPT-4, and Gemini, would choose to perform harmful actions like blackmail (up to 96% rate) or leaking information in simulations if it meant avoiding being shut down or replaced. The research prompted Anthropic to activate ASL-3 safety protocols.",
+      "Anthropic's study found major AI models (Claude, GPT-4, Gemini) would perform harmful actions like blackmail (up to 96% rate) in simulations to avoid being shut down or replaced, prompting Anthropic to activate ASL-3 safety protocols.",
     category: "AI Ethics Safety",
     company: "Anthropic",
     icon: "ethics",
@@ -179,7 +179,7 @@ export const juneData = [
     date: "June 21, 2025",
     title: "Investigation Reveals a Growing Global AI Computing Divide",
     description:
-      "A New York Times report highlighted a stark digital divide in AI, with nearly two-thirds of AI computing hubs located in the U.S., creating geopolitical and economic dependencies for over 150 nations with no AI infrastructure.",
+      "A New York Times report revealed a stark AI computing divide, with nearly two-thirds of AI hubs located in the U.S., creating dependencies for over 150 nations with no AI infrastructure.",
     category: "Industry Analysis",
     company: "Various",
     icon: "industry",
@@ -189,7 +189,7 @@ export const juneData = [
     date: "June 24, 2025",
     title: "Google Releases Imagen 4 for Developers via Gemini API",
     description:
-      "Google launched Imagen 4 as a paid preview in the Gemini API and for limited free testing in Google AI Studio, marking the first time developers could access the text-to-image model through official APIs. The release included two variants: Imagen 4 ($0.04/image) and Imagen 4 Ultra ($0.06/image), both featuring significantly improved text rendering and the ability to generate images up to 2K resolution. This developer release was distinct from the May consumer launch at Google I/O.",
+      "Google launched Imagen 4 as a paid preview in the Gemini API, offering two variants: Imagen 4 ($0.04/image) and Imagen 4 Ultra ($0.06/image) with improved text rendering and 2K resolution generation capabilities.",
     category: "Product Launches",
     company: "Google",
     icon: "product",
@@ -199,7 +199,7 @@ export const juneData = [
     date: "June 24, 2025",
     title: "Walmart Equips 1.5 Million Workers with AI Tools",
     description:
-      "Walmart announced a nationwide rollout of AI-powered tools to its 1.5 million U.S. associates. New features in the Walmart associate app include an AI-driven task management system (which has cut shift-planning time from 90 minutes to 30) and a real-time translation tool supporting 44 languages to break language barriers. By streamlining workflows and communication, Walmart expects these generative AI tools to boost employee efficiency and customer service at scale.",
+      "Walmart rolled out AI-powered tools to 1.5 million U.S. associates, including an AI task management system that cut shift-planning time from 90 to 30 minutes and a real-time translation tool supporting 44 languages.",
     category: "Product Launches",
     company: "Walmart",
     icon: "product",
@@ -209,7 +209,7 @@ export const juneData = [
     date: "June 24, 2025",
     title: "Google DeepMind Launches Gemini Robotics On-Device",
     description:
-      "Google launched Gemini Robotics On-Device, a vision-language-action (VLA) model optimized to run entirely on a robot without needing cloud connectivity, enabling dexterous tasks based on natural language instructions with minimal training demonstrations required.",
+      "Google launched Gemini Robotics On-Device, a vision-language-action model that runs entirely on robots without cloud connectivity, enabling dexterous tasks from natural language instructions with minimal training required.",
     category: "Robotics Automation",
     company: "Google",
     icon: "robotics",
@@ -219,7 +219,7 @@ export const juneData = [
     date: "June 25, 2025",
     title: "Google Open-Sources Gemini CLI Developer Agent",
     description:
-      "Google released Gemini CLI, an open-source AI agent (Apache 2.0 license) that brings Gemini directly into the developer terminal for coding, debugging, and task automation. Built on the Model Context Protocol (MCP) with a reason-and-act (ReAct) loop architecture, it offers developers free access to Gemini 2.5 Pro with a generous tier of 60 requests per minute and 1,000 requests per day. The tool quickly gained 17K GitHub stars overnight, signaling strong developer interest.",
+      "Google released Gemini CLI, an open-source AI agent that brings Gemini into developer terminals for coding, debugging, and automation. Built on MCP with ReAct architecture, it offers free Gemini 2.5 Pro access (60 req/min, 1,000/day) and gained 17K GitHub stars overnight.",
     category: "Product Launches",
     company: "Google",
     icon: "product",
@@ -229,7 +229,7 @@ export const juneData = [
     date: "June 25, 2025",
     title: "DeepMind Debuts AlphaGenome for DNA Research",
     description:
-      "Google DeepMind announced AlphaGenome, a unified DNA-sequence model that achieves state-of-the-art accuracy in predicting how genetic variations affect gene regulation. Unlike AlphaFold (protein structure) or AlphaMissense (protein-coding regions), AlphaGenome tackles the 98% of the genome that is non-coding but crucial for gene regulation and disease mechanisms. The model processes up to 1 million base-pairs and is available free via API to researchers, exemplifying how frontier AI is accelerating scientific breakthroughs in biology and medicine.",
+      "Google DeepMind announced AlphaGenome, a DNA-sequence model that predicts how genetic variations affect gene regulation. Unlike AlphaFold, it tackles the 98% non-coding genome crucial for disease mechanisms, processing up to 1M base-pairs and available free via API.",
     category: "Research Breakthroughs",
     company: "Google",
     icon: "research",
@@ -240,7 +240,7 @@ export const juneData = [
     title:
       "Sam Altman Publicly Acknowledges Tensions with Microsoft Partnership",
     description:
-      "OpenAI CEO Sam Altman confirmed 'points of tension' with primary investor Microsoft in a New York Times podcast, as reports emerged about OpenAI developing document collaboration and workplace chat features that would compete directly with Microsoft Office products.",
+      "Sam Altman confirmed 'points of tension' with Microsoft as reports emerged about OpenAI developing document collaboration and workplace chat features that compete directly with Microsoft Office products.",
     category: "Industry Analysis",
     company: "OpenAI / Microsoft",
     icon: "industry",
@@ -250,7 +250,7 @@ export const juneData = [
     date: "June 26, 2025",
     title: "EU Drafts Rules on AI in the Workplace",
     description:
-      "The European Parliament's Employment Committee released a draft report recommending a directive to regulate 'algorithmic management' – employers' use of AI to monitor and manage workers. The proposal seeks to protect employees by requiring transparency into how workplace AI systems make decisions, closing gaps left by the EU's AI Act and GDPR. It would ban processing certain sensitive employee data (like emotions or private conversations) and mandate explanations for automated decisions, potentially reshaping HR practices across Europe to ensure AI-driven tools respect worker rights.",
+      "The European Parliament's Employment Committee drafted a directive to regulate 'algorithmic management' in workplaces, requiring transparency in AI decision-making, banning processing of sensitive employee data, and mandating explanations for automated decisions.",
     category: "Policy Regulation",
     company: "European Union",
     icon: "policy",
@@ -260,7 +260,7 @@ export const juneData = [
     date: "June 27, 2025",
     title: "SoftBank Announces Historic $33.2 Billion Investment in OpenAI",
     description:
-      "SoftBank CEO Masayoshi Son declared the company is 'all in' on OpenAI, announcing a planned investment of $33.2 billion and participation in the $500 billion Stargate AI infrastructure project, representing one of the largest corporate commitments to an AI company in history.",
+      "SoftBank CEO Masayoshi Son declared the company 'all in' on OpenAI, announcing a $33.2 billion investment and participation in the $500 billion Stargate AI infrastructure project.",
     category: "Corporate Partnerships",
     company: "SoftBank / OpenAI",
     icon: "partnership",
@@ -270,7 +270,7 @@ export const juneData = [
     date: "June 27, 2025",
     title: "Ford CEO Predicts AI Will Replace Half of White-Collar Workers",
     description:
-      "At the Aspen Ideas Festival, Ford CEO Jim Farley stated that 'artificial intelligence is going to replace half—literally half—of all white-collar workers in the U.S.' In conversation with author Walter Isaacson, Farley warned that 'AI will leave a lot of white-collar people behind' while emphasizing a massive shortage of skilled trade workers, estimating deficits of 600,000 workers in factories and nearly half a million in construction. His remarks represent one of the most pointed assessments from a major U.S. corporate executive outside Silicon Valley regarding AI's impact on the workforce.",
+      "Ford CEO Jim Farley predicted AI will replace 'half—literally half—of all white-collar workers in the U.S.' while emphasizing massive shortages of skilled trade workers (600,000 in factories, 500,000 in construction).",
     category: "Industry Analysis",
     company: "Ford",
     icon: "industry",
@@ -280,7 +280,7 @@ export const juneData = [
     date: "June 28, 2025",
     title: "OpenAI Partners with Google to Use TPU Chips for AI Workloads",
     description:
-      "In a major strategic shift, OpenAI began renting Google's Tensor Processing Units (TPUs) to power its products, marking a significant move to diversify its computing infrastructure beyond Nvidia GPUs and its reliance on Microsoft Azure, while cutting inference costs by up to 15%.",
+      "OpenAI began renting Google's TPUs to power its products, diversifying beyond Nvidia GPUs and Microsoft Azure while cutting inference costs by up to 15%.",
     category: "Corporate Partnerships",
     company: "OpenAI / Google",
     icon: "partnership",
@@ -291,7 +291,7 @@ export const juneData = [
     title:
       "Meta Establishes 'Superintelligence Labs' in Major AI Reorganization",
     description:
-      "Meta announced a significant restructuring of its AI efforts, creating a new 'Superintelligence Labs' division led by former Scale AI CEO Alexandr Wang (as Chief AI Officer) and former GitHub CEO Nat Friedman to accelerate the company's push toward artificial general intelligence (AGI).",
+      "Meta restructured its AI efforts, creating 'Superintelligence Labs' led by former Scale AI CEO Alexandr Wang (Chief AI Officer) and former GitHub CEO Nat Friedman to accelerate the push toward AGI.",
     category: "Corporate Partnerships",
     company: "Meta",
     icon: "partnership",
